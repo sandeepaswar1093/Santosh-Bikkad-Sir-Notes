@@ -1,0 +1,82 @@
+Program 1:
+
+public class Welcome {
+
+	public static void main(String args[]) {
+		
+		System.out.println("Welcome to Bikkad It");
+	}
+}
+
+program 2:
+
+public class TwoNoAddition {
+
+	public static void main(String[] args) {
+
+		int a = 10;
+		int b = 20;
+		int c=a+b;
+		
+		System.out.println("Addition of a and b =" + c);
+	}
+}
+
+
+program 3:
+
+
+public class ThreeNoAddition {
+
+	public static void main(String[] args) {
+		
+		int a=20;
+		int b=30;
+		int c=90;
+		int d=a+b+c;
+		
+		System.out.println("Addition of a,b And c="+ d);
+		
+	}
+}
+
+
+program 4:
+
+public class MultOfTwoNos {
+
+	public static void main(String[] args) {
+		int a=10;
+		int b=30;
+		int c=a*b;
+		System.out.println("Multiplication of a and b="+ c);
+	}
+}
+
+
+program 5:
+
+
+public class ThreeNoMulti {
+
+	public static void main(String[] args) {
+		
+		int a=10;
+		int b=5;
+		int c=10;
+		int d=a*b*c;
+		
+
+		System.out.println("Multiplication of a,b and c="+ d);
+		
+	}
+}
+
+
+
+Assignement :
+
+1) Substraction of two no
+2)Substraction of three no
+3)Division of two error
+4)Division of three no

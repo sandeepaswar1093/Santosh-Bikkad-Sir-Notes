@@ -1,0 +1,111 @@
+Operator: Operator is symbol that is used to perform operation
+according to user requirment.
+
+Types of operator:
+
+1)Arithmetic operators(+,-,*,/,%)
+
+2)Relational Operator(>,<,<=,>=,!=,==)
+
+3)Increament operator/Decreament Operator
+1)Increament operator
+  1)Pre Increament
+  2)Post Increament
+
+2)Decreament Operator
+  1)Pre decreament
+  2) Post Decreament
+
+4)Assignment Operator
+1)Simple Assignment(=)
+2)Compound Assignemnt(+=,-=,*=,/=)
+
+5) Ternary Operator(? :)
+
+6)Logical Operator(&&,||,!)
+
+7)Bitwise Operator(AND,OR,XOR,complement)
+
+
+
+1)Arithmetic operators(+,-,*,/,%)
+
+Example:
+
+import java.util.Scanner;
+
+public class ArithmeticOperators {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter any two numbers");
+		int a;
+		int b;
+		
+		a=sc.nextInt();
+		b=sc.nextInt();
+		int add=a+b;
+		System.out.println("Addition ="+add);
+		
+		int sub=a-b;
+		System.out.println("Substraction ="+sub);
+		
+		int mul=a*b;
+		System.out.println("Multiplication="+ mul);
+		
+		int div=a/b;
+		System.out.println("Division ="+ div);
+		
+		int mod=a%b;
+		System.out.println("Modulas="+mod);
+	}
+}
+
+2)Relational Operator:
+
+
+import java.util.Scanner;
+
+public class RelationalOperator {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter any two numbers");
+		int a;
+		int b;
+		
+		a=sc.nextInt();
+		b=sc.nextInt();
+		
+		System.out.println("true/false :"+(a>b));
+		System.out.println("true /false:"+(a<b));
+		System.out.println("true /false:"+(a>=b));
+		System.out.println("true/false:"+(a<=b));
+		System.out.println("true/false :"+(a==b));
+		System.out.println("true/false :"+(a!=b));
+	}
+}
+
+3) Assignment Operator.
+
+Example:
+
+public class AssignmentOperator {
+
+	public static void main(String[] args) {
+		
+        int a;
+	a=10;
+	int b=5;
+	System.out.println(a);
+	
+	a+=a;
+	//a=a+a;
+	
+	System.out.println(a);	
+}
+}
+
+

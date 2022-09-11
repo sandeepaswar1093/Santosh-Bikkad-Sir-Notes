@@ -1,0 +1,101 @@
+3)if else ladder: It is used when we have one if statement and multiple 
+else if statements and at last one else statement.
+
+Syntax:
+
+if(condition){
+-----------
+}else if(condition){
+-----------
+}else if(condition){
+-----------
+}else {
+-----------
+}
+
+Example :
+
+import java.util.Scanner;
+
+public class IfElseLadder {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENter your marks");
+		int marks;
+		marks=sc.nextInt();
+		if(marks >100) {
+		System.out.println("Invalid Input");	
+		}
+		else if(marks >=80) {
+			System.out.println("Topper");
+		}else if(marks <80 && marks >=60) {
+			System.out.println("First class");
+		}else if(marks <60 && marks>=40) {
+			System.out.println("Second class");
+		}
+		
+		else {
+			System.out.println("You are not eligible for taking admission next class");
+		}
+		
+		
+		sc.close();
+		
+		
+	}
+}
+
+
+
+4)nested if:
+
+if(condition){
+
+if(condition){
+
+}else{
+
+}
+}else{
+
+if(condition){
+
+}else{
+
+}
+}
+
+Example :
+
+public class NestedIf {
+
+	public static void main(String[] args) {
+
+		int a = 10;
+		int b = 2;
+		int c = 50;
+
+		if (a > b) {
+
+			if (a > c) {
+				System.out.println("Maximum no is=" + a);
+			} else {
+				System.out.println("Maximum no is=" + c);
+			}
+		} else {
+			if (b > c) {
+				System.out.println("Maximun value is=" + b);
+			} else {
+				System.out.println("Maximum no is="+c);
+			}
+		}
+
+	}
+}
+
+
+
+
+

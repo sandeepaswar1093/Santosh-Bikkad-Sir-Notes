@@ -1,0 +1,109 @@
+Immutability:Once we create String Object we can not perform any changes into that existing object.
+If we are trying to perform any changes in existing object then with that changes new object will be created .
+This non changable behaviour is nothing but immutability.
+
+note: Bydefault String class is immutable.
+
+package immutable;
+
+public class ImmutableDemo {
+
+	public static void main(String[] args) {
+
+		String s = "Santosh";
+               s.concat("Bikkad");
+		System.out.println(s);
+	}
+}
+
+
+Mutability:Once we create StringBuffer Object then we can perform any changes into that existing 
+Object.This changable behaviour is nothing but mutability.
+
+note: Bydefault StringBuffer and StringBuilder class is mutable.
+
+Example :
+
+
+package mutable;
+
+public class MutableDemo {
+public static void main(String[] args) {
+	
+
+	StringBuffer sb=new StringBuffer("Bikkad");
+	sb.append("Santosh");
+	System.out.println(sb);
+}
+}
+
+
+Example :
+
+package stringequalsmethod;
+
+public class StringDemo {
+
+	public static void main(String[] args) {
+
+		String s1 = "Santosh";
+
+		String s2 = "Santosh";
+
+		System.out.println(s1 == s2);
+		System.out.println(s1.equals(s2));
+	}
+}
+
+
+
+
+1)== operator and .equals method in the case of String.
+In String class .equals method is overriden for content comparision hence eventhough object are diffrent 
+if content are same then .equals method return true.
+
+Example :
+
+
+package stringequalsmethod;
+
+public class StringDemo {
+
+	public static void main(String[] args) {
+
+		String s1 = new String("Santosh");
+
+		String s2 = new String("Santosh");
+
+		System.out.println(s1 == s2);
+		System.out.println(s1.equals(s2));
+	}
+}
+
+
+1)== operator and .equals method in the case of StringBugffer.
+.equals method will do addrees comparision .
+
+Example :
+
+
+package stringBufferequalsmethod;
+
+public class StringBufferDemo extends Object {
+
+	public static void main(String[] args) {
+		
+		StringBuffer sb1=new StringBuffer("Bikkad");
+		
+		StringBuffer sb2=new StringBuffer("Bikkad");
+		
+		System.out.println(sb1==sb2);
+		System.out.println(sb1.equals(sb2));
+	}
+}
+
+
+
+
+
+

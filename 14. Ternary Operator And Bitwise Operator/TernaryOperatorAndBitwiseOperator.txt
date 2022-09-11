@@ -1,0 +1,100 @@
+# Ternary Operator( ? :)
+
+Example :
+
+package typesOfOperator;
+
+import java.util.Scanner;
+
+public class TernaryOperator {
+
+	public static void main(String[] args) {
+		
+
+	Scanner sc=new Scanner(System.in);
+	System.out.println("ENter any two numbers");
+	int a=sc.nextInt();
+	int b=sc.nextInt();
+	int maximum;
+//	if(a>b) {
+//		System.out.println("Maximum no value a="+a);
+//	}else {
+//		System.out.println("Maximum no value b="+ b);
+//	}
+	
+	maximum=(a>b)   ? a : b;
+	System.out.println("Maximum no= "+ maximum);
+	
+}
+}
+
+
+# Bitwise Operator
+
+123= decimal number
+4354= decimal number
+
+101010101010=Binary number
+010101010101=Binary Number
+
+coversion of Decimal number to binary:
+
+                         512 256 128 64 32 16 8 4 2 1                               
+17 =                                        1 0 0 0 1
+33 =                                     1  0 0 0 0 1
+55 =                                     1  1 0 1 1 1
+14 =                                          1 1 1 0
+87 =                                  1  0  1 0 1 1 1
+123=                                  1  1  1 1 0 1 1
+
+56=
+59=
+145=
+67=
+84=
+54=
+89=
+167=
+129=
+128=
+16=
+97=
+543=
+876=
+
+
+
+Bitwise AND 
+
+A  B  Result
+
+0 0    0
+0 1    0
+1 0    0
+1 1    1
+
+Bitwise OR
+
+A B  Result
+0 0   0
+0 1   1
+1 0   1
+1 1   1
+
+Bitwise X-OR
+
+A B  Result
+0 0  0 
+0 1  1
+1 0  1
+1 1  0
+
+
+
+
+
+
+
+
+
+

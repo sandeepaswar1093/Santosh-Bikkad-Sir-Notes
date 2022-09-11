@@ -1,0 +1,132 @@
+Variable:variable is the name of memory location.
+It is userdefinied name which is given by user.
+variables can store any type of value.
+
+Types of variable:
+
+1)Local variable
+
+2)Instance Variable
+
+3)static variable
+
+1) Local Variable:  A variable which is declared inside 
+ body of method is called as local variable.
+
+Example :
+
+public class LocalVariableDemo {
+
+	public void show() {
+		int a=10;
+		System.out.println(a);
+	}
+	
+	public static void main(String[] args) {
+		
+		LocalVariableDemo d=new LocalVariableDemo();
+		d.show();
+	}
+}
+
+
+Example 2:
+
+public class LocalVariableDemo1 {
+
+	public static void main(String[] args) {
+
+		int a = 10;
+		System.out.println(a);
+	}
+}
+
+
+Instance Variable:A variable which is declared inside the body of class and 
+outside the method is called as instance variable.
+
+Example :
+
+
+public class InstanceVariable {
+
+	int a=10;
+	
+	public static void main(String[] args) {
+		
+		InstanceVariable i=new InstanceVariable();
+		System.out.println(i.a);
+	}
+}
+
+3)Static variable:A variable which is declared inside the class and outside the method
+with the help of static keyword.
+
+Example:
+
+public class StaticVariableDemo {
+
+	  static int a=20;
+	
+	  public static void main(String[] args) {
+		
+		  System.out.println(StaticVariableDemo.a);
+	}
+}
+
+
+
+# calling of  All variables in one class.
+
+
+public class Demo {
+
+	static int s = 30;
+	int i = 20;
+
+	public void show() {
+		int l = 10;
+   System.out.println(l);
+	}
+
+	public static void main(String[] args) {
+
+		Demo d=new Demo();
+		d.show();
+		System.out.println(d.i);
+		System.out.println(Demo.s);
+	}
+}
+
+
+#  Static variable we can access in staic and non static area but instance variable we
+ can not access in static area and we can access instance variable in non static area.
+
+Example :
+
+public class Demo1 {
+
+	int i = 10;
+	static int s = 20;
+
+	public void show() {
+		System.out.println(i);
+		System.out.println(s);
+	}
+
+	public static void display() {
+		System.out.println(s);
+		// System.out.println(i);
+	}
+
+	public static void main(String[] args) {
+
+		Demo1 d1=new Demo1();
+		d1.show();
+		
+		Demo1.display();
+	}
+}
+
+
+

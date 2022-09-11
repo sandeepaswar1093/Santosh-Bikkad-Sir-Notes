@@ -1,0 +1,162 @@
+Exception Progation :
+Exception propogation means giving the chance to caller method to handle exception.
+
+
+
+1)
+
+package exceptionPropogation;
+
+public class PropogationDemo {
+
+	public static void m1() {
+		System.out.println("m1 method start");
+		m2();
+	}
+
+	public static void m2() {
+		System.out.println("m2 method start");
+		int a = 10;
+		int b = 0;
+		int c = a / b;
+
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println("Main Method start");
+		m1();
+	}
+}
+
+
+2)
+
+package exceptionPropogation;
+
+public class PropogationDemo {
+
+	public static void m1() {
+		System.out.println("m1 method start");
+		m2();
+	}
+
+	public static void m2() {
+		System.out.println("m2 method start");
+		int a = 10;
+		int b = 0;
+		try {
+		int c = a / b;
+		}catch(ArithmeticException e) {
+			System.out.println( e);
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println("Main Method start");
+		m1();
+	}
+}
+
+
+
+3)
+
+package exceptionPropogation;
+
+public class PropogationDemo {
+
+	public static void m1() {
+		System.out.println("m1 method start");
+		try {
+		m2();
+		}catch(ArithmeticException e) {
+			System.out.println(e);
+		}
+	}
+
+	public static void m2() {
+		System.out.println("m2 method start");
+		int a = 10;
+		int b = 0;
+		int c = a / b;
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println("Main Method start");
+		m1();
+	}
+}
+
+
+4)
+
+
+package exceptionPropogation;
+
+public class PropogationDemo {
+
+	public static void m1() {
+		System.out.println("m1 method start");
+		
+		m2();
+		
+	}
+
+	public static void m2() {
+		System.out.println("m2 method start");
+		int a = 10;
+		int b = 0;
+		int c = a / b;
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println("Main Method start");
+		try {
+		m1();
+		}catch(ArithmeticException e) {
+			System.out.println(e);
+		}
+	}
+}
+
+
+5)
+
+package exceptionPropogation;
+
+public class PropogationDemo {
+
+	public static void m1() {
+		System.out.println("m1 method start");
+
+		m2();
+
+	}
+
+	public static void m2() {
+		System.out.println("m2 method start");
+		int a = 10;
+		int b = 0;
+		int c = a / b;
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println("Main Method start");
+
+		m1();
+
+	}
+}
+
+
+
+
+
+
+

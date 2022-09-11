@@ -1,0 +1,254 @@
+Rule 5: whenever action is common but implementation is diffrent then we should go for abstract class.
+
+Example :
+
+package abstraction;
+
+public abstract class Vehicle {
+
+	public abstract void start();
+	
+	public abstract void noOfTyres();
+}
+
+
+package abstraction;
+
+public class Car extends Vehicle{
+
+	@Override
+	public void start() {
+		System.out.println("starts with key and self start");
+	}
+
+	@Override
+	public void noOfTyres() {
+		System.out.println("4 tyres");
+	}
+
+	public static void main(String[] args) {
+		
+	//	Vehicle v=new Vehicle();
+		
+		Car c=new Car();
+		c.start();
+		c.noOfTyres();
+	
+		Vehicle v=new Car();
+		v.start();
+		v.noOfTyres();
+		
+	
+	}
+}
+
+
+
+package abstraction;
+
+public class Scooter extends Vehicle{
+
+	@Override
+	public void start() {
+		System.out.println("starts with key and kick");
+	}
+
+	@Override
+	public void noOfTyres() {
+		System.out.println("two tyres");
+		
+	}
+
+	public static void main(String[] args) {
+	
+		Scooter sc=new Scooter();
+		sc.start();
+		sc.noOfTyres();
+		
+		Vehicle v=new Scooter();
+		v.start();
+		v.noOfTyres();
+	}
+}
+
+
+
+Example:
+
+
+package abstraction;
+
+public abstract class Animal {
+
+	public abstract void sound();
+	
+	public abstract void noOflegs();
+	
+	public void eating() {
+		System.out.println("Both are eating");
+	}
+	
+	
+}
+
+
+
+package abstraction;
+
+public class Dog extends Animal {
+
+	@Override
+	public void sound() {
+	System.out.println("Dog is barking");
+		
+	}
+
+	@Override
+	public void noOflegs() {
+		System.out.println("four legs");
+		
+	}
+public static void main(String[] args) {
+	
+	Dog d=new Dog();
+	d.sound();
+	d.noOflegs();
+	d.eating();
+//	Animal animal =new Animal();
+	
+	Animal a=new Dog();
+	a.sound();
+	a.noOflegs();
+}
+	
+}
+
+
+package abstraction;
+
+public class Human extends Animal{
+
+	@Override
+	public void sound() {
+		System.out.println("Human is speaking");
+		
+	}
+
+	@Override
+	public void noOflegs() {
+		System.out.println("Two legs");
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Human h=new Human();
+		h.sound();
+		h.noOflegs();
+		h.eating();
+	//	Animal a=new Animal();
+		
+		Animal a=new Human();
+		a.sound();
+		a.noOflegs();
+	}
+
+}
+
+
+Rule no 6 : Abstract class can have its own constructor.
+
+
+package abstraction;
+
+public abstract class Animal {
+
+	public abstract void sound();
+	
+	public abstract void noOflegs();
+	
+	public void eating() {
+		System.out.println("Both are eating");
+	}
+	
+	public Animal(){
+		
+		System.out.println("Animal class Constructor");
+		
+	}
+	
+}
+
+
+
+package abstraction;
+
+public class Dog extends Animal {
+
+	@Override
+	public void sound() {
+	System.out.println("Dog is barking");
+		
+	}
+
+	@Override
+	public void noOflegs() {
+		System.out.println("four legs");
+		
+	}
+	public Dog() {
+		super();
+		System.out.println("dog Class Constructor");
+	}
+	
+public static void main(String[] args) {
+	
+	Dog d=new Dog();
+	d.sound();
+	d.noOflegs();
+	d.eating();
+//	Animal animal =new Animal();
+	
+	Animal a=new Dog();
+	a.sound();
+	a.noOflegs();
+}
+	
+}
+
+
+package abstraction;
+
+public class Human extends Animal{
+
+	@Override
+	public void sound() {
+		System.out.println("Human is speaking");
+		
+	}
+
+	@Override
+	public void noOflegs() {
+		System.out.println("Two legs");
+		
+	}
+	
+	public Human() {
+		System.out.println("Human class Constructor");
+	}
+	public static void main(String[] args) {
+		
+		Human h=new Human();
+		h.sound();
+		h.noOflegs();
+		h.eating();
+	//	Animal a=new Animal();
+		
+		Animal a=new Human();
+		a.sound();
+		a.noOflegs();
+	}
+
+}
+
+

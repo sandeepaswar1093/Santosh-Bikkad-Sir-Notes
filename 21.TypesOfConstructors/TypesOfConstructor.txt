@@ -1,0 +1,152 @@
+Types Of Construtor :
+
+1) Deafult Constructor: 
+2) Parameterized Constructor
+3) Private Constructor
+4) Copy Constructor
+
+1) Deafult Constructor: A constructor which doesnt have any parameter is called as Default constructor.
+
+Example :
+
+package constructorTypes;
+
+public class DefaultDemo {
+
+	
+	int a;
+	String name;
+	
+	DefaultDemo(){
+	a=11;
+	name="Santosh";
+	System.out.println(a +" "+ name);
+	}
+	
+	public static void main(String[] args) {
+	
+		DefaultDemo d=new DefaultDemo();
+	}
+}
+
+
+2) Parameterized Constructor:
+
+Example 
+
+
+package constructorTypes;
+
+public class ParameterizedConstr {
+
+	ParameterizedConstr(int a, int b) {
+
+		System.out.println(a + " " + b);
+	}
+	
+	
+	ParameterizedConstr(String  s1, String s2 ) {
+
+		System.out.println(s1+" "+ s2);
+	}
+	
+	ParameterizedConstr(int i  , String s ) {
+
+		System.out.println(i+" "+ s);
+	}
+	public static void main(String[] args) {
+		
+		ParameterizedConstr p=new ParameterizedConstr(11, 22);
+		
+		ParameterizedConstr p1=new ParameterizedConstr("Santosh", "Bikkad");
+	
+		ParameterizedConstr p2=new ParameterizedConstr(22, "Bikkad");
+	}
+}
+
+
+3) Copy Constructor:
+
+Example :
+
+package constructorTypes;
+
+public class CopyDemo {
+
+	int a;
+	String b;
+	
+	CopyDemo(){
+		a=33;
+		b="Bikkad";
+		System.out.println( a+" "+ b);
+	}
+	
+	CopyDemo(CopyDemo cd){
+		int a1=cd.a;
+		String b1=cd.b;
+		System.out.println(a1 +" "+b1);
+	}
+	
+	public static void main(String[] args) {
+		
+		CopyDemo c=new CopyDemo();
+		
+		CopyDemo c1=new CopyDemo(c);
+		
+		
+	}
+}
+
+
+4)Private Constructor:
+
+package constructorTypes;
+
+public class PrivateConstr {
+
+	int a;
+	String b;
+	
+	private PrivateConstr(){
+		a=22;
+		b="Bikkad";
+		System.out.println(a +" "+ b);
+	}
+public static void main(String[] args) {
+		
+		PrivateConstr p=new PrivateConstr();// we can create object in same class if constructor is private.
+	}	
+}
+
+Example 2:
+
+
+package constructorTypes;
+
+public class PrivateConstr {
+
+	int a;
+	String b;
+	
+	private PrivateConstr(){
+		a=22;
+		b="Bikkad";
+		System.out.println(a +" "+ b);
+	}
+	
+}
+
+
+package constructorTypes;
+
+public class PrivateContr1 {
+
+
+	public static void main(String[] args) {
+		
+		PrivateConstr p=new PrivateConstr();// we can not create object in another class if constructor is private.
+	}
+}
+
+

@@ -1,0 +1,147 @@
+1)for loop:
+
+syntax:
+        for(initialization ;condition;inc/dec){
+      -----------------------
+      -----------------------
+   }
+Example 1:
+
+package loopingStatement;
+
+public class ForloopDemo {
+
+	public static void main(String[] args) {
+		
+		for(int i=1;i<=5;i++) {
+			System.out.println(i);
+		}
+		
+	}
+}
+
+
+Example 2:
+
+package loopingStatement;
+
+public class ForloopDemo {
+
+	public static void main(String[] args) {
+		
+		for(int i=5;i>=1;i--) {
+			System.out.println(i);
+		}
+		
+	}
+}
+
+
+2)while loop:
+
+syntax:   
+
+while(condition){
+---------
+---------
+}
+
+Example 1:
+
+package loopingStatement;
+
+public class WhileLoopDemo {
+
+	public static void main(String[] args) {
+		
+		int i=1;
+		while(i<=5) {
+			System.out.println(i);
+			i++;
+		}
+	}
+}
+
+
+Example 2:
+
+
+package loopingStatement;
+
+public class WhileLoopDemo {
+
+	public static void main(String[] args) {
+		
+		int i=5;
+		while(i>=1) {
+			System.out.println(i);
+			i--;
+		}
+	}
+}
+
+
+3) do while loop:
+
+
+Syntax:
+
+do{
+------
+}while(condition);
+
+Example 1:
+
+package loopingStatement;
+
+public class DoWhileDemo {
+
+	public static void main(String[] args) {
+		int i=1;
+		do {
+			System.out.println(i);
+			i++;
+		}while(i<=5);
+	}
+}
+
+
+
+
+Example 2:
+
+package loopingStatement;
+
+public class DoWhileDemo {
+
+	public static void main(String[] args) {
+		int i=5;
+		do {
+			System.out.println(i);
+			i--;
+		}while(i>=1);
+	}
+}
+
+
+Example 3:
+
+
+package loopingStatement;
+
+public class DoWhileDemo {
+
+	public static void main(String[] args) {
+		int i=1;
+		do {
+			System.out.println(i);
+			i++;
+		}while(i>=5);
+	}
+}
+
+
+output : 1
+
+
+

@@ -1,0 +1,211 @@
+SortedSet: 
+ 
+ It is the Child Interface of Set.
+ If we want to Represent a Group of Individual Objects without Duplicates and all Objects will be Inserted According to Some Sorting Order,
+ then we should go for SortedSet. 
+ The Sorting can be Either Default Natural Sorting OR Customized Sorting Order.
+ For String Objects Default Natural Sorting is Alphabetical Order.
+ For Numbers Default Natural Sorting is Ascending Order. 
+ 
+Methods: 
+ 
+1) Object first(); Returns 1st Element of the SortedSet. 
+ 
+2) Object last(); Returns Last Element of the SortedSet. 
+ 
+3) SortedSetheadSet(Object obj); Returns SortedSet whose Elements are < Object. 
+ 
+4) SortedSettailSet(Object obj); 
+
+5) SortedSetsubSet(Object obj1, Object obj2); Returns SortedSet whose Elements are >= obj1 and <obj2. 
+ 
+6) Comparator comparator();  Returns Comparator Object that Describes Underlying SortingTechnique.
+   If we are using Default Natural Sorting Order then we will get null. 
+
+
+
+1)Sorted set Methods
+
+package sortedSet;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public class SortedSetMethods {
+
+	public static void main(String[] args) {
+		
+		SortedSet<Integer> s=new TreeSet<Integer>();
+		
+		s.add(100);
+		s.add(300);
+		s.add(200);
+		s.add(300);
+		s.add(600);
+		s.add(500);
+		s.add(700);
+	
+		System.out.println(s);
+	  System.out.println(s.first());
+	  System.out.println(s.last());
+	  System.out.println(s.headSet(500));
+	  System.out.println(s.tailSet(500));
+		System.out.println(s.subSet(200,700));
+		
+      SortedSet<String> s1=new TreeSet<String>();
+		
+		s1.add("A");
+		s1.add("C");
+		s1.add("B");
+		s1.add("F");
+		s1.add("G");
+		s1.add("H");
+		
+		System.out.println(s1);
+		
+}
+}
+
+
+
+TreeSet: 
+ 
+ The Underlying Data Structure is Balanced Tree.
+ Insertion Order is Not Preserved and it is Based on Some Sorting Order.
+ Heterogeneous Objects are Not Allowed. If we are trying to Insert we will get Runtime Exception Saying ClassCastException. 
+ Duplicate Objects are Not allowed. 
+ null Insertion is Possible (Only Once).
+ Implements Serializable and Cloneable Interfaces but Not RandomAccess Interface. 
+
+2)TreeSet Constructors
+
+1) TreeSet t = new TreeSet(); Creates an Empty TreeSet Object where all Elements will be Inserted According to Default Natural Sorting Order. 
+ 
+2) TreeSet t = new TreeSet(Comparator c); Creates an Empty TreeSet Object where all Elements will be Inserted According to Customized Sorting Order
+ which is described by Comparator Object. 
+ 
+3) TreeSet t = new TreeSet(Collection c); 
+ 
+4) TreeSet t = new TreeSet(SortedSet s); 
+
+
+
+package sortedSet;
+
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public class SortedSetMethods {
+
+	public static void main(String[] args) {
+		
+		SortedSet  s=new TreeSet();
+		
+		s.add(100);
+		s.add(300);
+		s.add(200);
+		s.add(300);
+		s.add(600);
+		s.add(500);
+		s.add(700);
+	//	s.add("Santosh");
+		System.out.println(s);
+		System.out.println(s.first());
+		System.out.println(s.last());
+		System.out.println(s.headSet(500));
+		System.out.println(s.tailSet(500));
+		System.out.println(s.subSet(200,700));
+		
+		SortedSet  s1=new TreeSet();
+		  s1.add("Ashok");
+		  s1.add("C");
+		  s1.add("Atika");
+		  s1.add("F");
+		  s1.add("G");
+		  s1.add("K");
+		  s1.add("z");
+		  System.out.println(s1);
+		
+	}
+}
+
+
+Example 2:
+
+
+package studentCollageUniversityExample;
+
+public class Student {
+
+	private int id;
+	private String name;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + "]";
+	}
+	
+}
+
+
+
+
+package studentCollageUniversityExample;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class Collage {
+
+	public List<Student> add() {
+
+		Student s1 = new Student();
+		s1.setId(111);
+		s1.setName("Santosh");
+
+		Student s2 = new Student();
+		s2.setId(222);
+		s2.setName("Bikkad");
+
+		List<Student> s = new ArrayList();
+		s.add(s1);
+		s.add(s2);
+		s.add(s2);
+		return s;
+	}
+}
+
+
+
+package studentCollageUniversityExample;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+public class University {
+
+	public static void main(String[] args) {
+		
+		Collage c=new Collage();
+		   List<Student> student = c.add();
+		     System.out.println(student);
+		   Iterator iterator = student.iterator();
+		   
+		   while(iterator.hasNext()) {
+			   System.out.println(iterator.next());
+		   }
+	}
+}

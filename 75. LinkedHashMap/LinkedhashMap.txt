@@ -1,0 +1,118 @@
+Linked HashMap:
+
+Underlying data Structure is Combination of HashTable And Linked List.
+
+Insertion Order is preserved.
+
+Introduced in 1.4 version.
+
+Example 1:
+
+package com.BikkkadIT;
+
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class LinkedHashMapDemo {
+
+	
+	public static void main(String[] args) {
+		
+		Map<Integer,String> map=new LinkedHashMap<>();
+		map.put(5, "Java");
+		map.put(23, "Python");
+		map.put(24, "Spring");
+		map.put(26, "C");
+		System.out.println(map);
+		
+		Set<Integer> keySet = map.keySet();
+		
+		Iterator<Integer> iterator = keySet.iterator();
+		while(iterator.hasNext()) {
+			Integer key = iterator.next();
+			 String value = map.get(key);
+			
+			 System.out.println(key +" "+ value);
+		}
+		
+		
+	}
+}
+
+
+
+India Example :
+
+
+package com.BikkkadIT;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class IndiaExample {
+
+	public static void main(String[] args) {
+		
+	
+	List<String> mh=new ArrayList();
+	
+	mh.add("Mumbai");
+	mh.add("Pune");
+
+List<String> gj=new ArrayList();
+	
+	gj.add("Surat");
+	gj.add("Gandhinagar");
+
+	
+	Map<String,List<String>> india=new HashMap<>();
+	india.put("maharashtra",mh);
+	india.put("gujrat", gj);
+	
+	Set<String> keySet = india.keySet();
+	
+	Iterator<String> iterator = keySet.iterator();
+
+	while(iterator.hasNext()) {
+		String key = iterator.next();
+		
+		List<String> list = india.get(key);
+		System.out.println(list);
+		Iterator<String> iterator2 = list.iterator();
+		
+		while(iterator2.hasNext()) {
+			String cities = iterator2.next();
+			System.out.println(cities);
+		}
+		
+	}
+	
+	
+	
+}
+}
+
+
+
+
+
+Remaining Points :
+
+1)Comparable And Comparator
+2)Treeset
+3)TreeMap
+4) Concurrent Collection
+5)Queue
+6)MultiThreading
+7)SingleTon Class
+8)Immutable Class.
+9)Hibernate
+
+
+

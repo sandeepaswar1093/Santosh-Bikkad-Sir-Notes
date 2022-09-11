@@ -1,0 +1,159 @@
+Super Keyword: Super keyword refers to the Objects of super class.
+It is used when we want to call super class variable,methods and constructor through sub
+class objects.
+
+Note :1) Whenever the super class and subclass variable and method name both are same 
+then it can be used only.
+
+2)To avoid confusion between super class and sub class variables and methods that 
+have same name in that situation we should go for super keyword.
+
+Super keyword used with
+
+1)Variables
+2)Methods 
+3)Constructor.
+
+1)super with Variables :
+
+package superWithVariable;
+
+public class A {
+
+	int a=10;
+	
+}
+
+
+package superWithVariable;
+
+public class B extends A{
+
+	int a=20;
+	
+	public void display() {
+		System.out.println(a);
+		System.out.println(super.a);
+	}
+	public static void main(String[] args) {
+		
+		B b=new B();
+		b.display();
+		
+	}
+}
+
+2) super with method.
+
+
+package superWithVariable;
+
+public class A {
+
+	public void show() {
+		System.out.println("Parent class show method");
+	}
+	
+	
+}
+
+
+package superWithVariable;
+
+public class B extends A {
+
+	public void show() {
+		super.show();
+		System.out.println("child  class show method");
+	}
+
+	public static void main(String[] args) {
+
+		B b = new B();
+		b.show();
+
+	}
+}
+
+
+
+3)super with Constructor.
+
+
+package superWithVariable;
+
+public class A {
+
+	public A() {
+		super();
+		System.out.println("Parent class Constructor");
+	}
+
+}
+
+
+
+package superWithVariable;
+
+public class B extends A {
+
+	public B() {
+		super();
+		System.out.println("Child class Constructor");
+	}
+
+	public static void main(String[] args) {
+
+		B b = new B();
+
+	}
+}
+
+
+# super  with multilevel inheritance:
+
+
+package superWithVariable;
+
+public class A {
+int a=10;
+
+}
+
+package superWithVariable;
+
+public class B extends A {
+
+	int a=20;
+	
+	public void display() {
+		System.out.println(super.a);
+		
+	}
+}
+
+
+
+
+package superWithVariable;
+
+public class C extends B {
+int a=30;
+
+public void dispaly() {
+	System.out.println(a);
+	System.out.println(super.a);
+	super.display();
+}
+
+public static void main(String[] args) {
+
+	C c=new C();
+	c.dispaly();
+}
+}
+
+
+
+
+

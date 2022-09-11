@@ -1,0 +1,286 @@
+Setter Getter:
+
+
+Example 1:
+
+
+package setterGetter;
+
+public class Student {
+
+	int rollno=101;
+
+	String name="Santosh";
+
+	@Override
+	public String toString() {
+		return "Student [rollno=" + rollno + ", name=" + name + "]";
+	}
+
+	public static void main(String[] args) {
+
+		Student stu = new Student();
+		
+		System.out.println(stu);
+	}
+
+}
+
+
+
+
+
+
+Example 2:
+
+
+package setterGetter;
+
+public class Student {
+
+int rollno;
+
+String name;
+
+
+
+@Override
+public String toString() {
+	return "Student [rollno=" + rollno + ", name=" + name + "]";
+}
+
+
+
+public static void main(String[] args) {
+	
+	Student stu=new Student();
+	stu.rollno=101;
+	stu.name="Santosh";
+	
+	System.out.println(stu);
+}
+
+}
+
+
+
+
+Example 3:
+
+
+package setterGetter;
+
+public class Student {
+
+	int rollno;
+
+	String name;
+
+	@Override
+	public String toString() {
+		return "Student [rollno=" + rollno + ", name=" + name + "]";
+	}
+
+	
+
+}
+
+
+
+
+package setterGetter;
+
+public class Test {
+
+	
+	public static void main(String[] args) {
+
+		Student stu = new Student();
+		   stu.rollno=101;
+		   stu.name="Santosh";
+		System.out.println(stu);
+	}
+
+}
+
+
+
+Example 4:
+
+
+package setterGetter;
+
+public class Student {
+
+	private int rollno;
+
+	private String name;
+
+	public int getRollno() {
+		return rollno;
+	}
+
+	public void setRollno(int rollno) {
+		this.rollno = rollno;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	
+
+	
+}
+
+
+package setterGetter;
+
+public class Test {
+
+	
+	public static void main(String[] args) {
+
+		Student stu = new Student();
+		  stu.setRollno(101);
+		  stu.setName("Santosh");
+		
+		  System.out.println(stu.getRollno());
+		  System.out.println(stu.getName());
+		  
+		  
+		  Student stu1=new Student();
+		  stu1.setRollno(102);
+		  stu1.setName("Bikkad");
+		  
+		  System.out.println(stu1.getRollno());
+		  System.out.println(stu1.getName());
+		  
+		  
+	}
+
+}
+
+
+
+Example 5:
+
+
+package setterGetter;
+
+public class Student {
+
+	private int rollno;
+
+	private String name;
+
+	
+	
+	
+	public Student(int rollno, String name) {
+		super();
+		this.rollno = rollno;
+		this.name = name;
+	}
+
+
+
+
+	@Override
+	public String toString() {
+		return "Student [rollno=" + rollno + ", name=" + name + "]";
+	}
+
+	
+	
+}
+
+
+
+package setterGetter;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		Student stu = new Student(101, "Santosh");
+		System.out.println(stu);
+
+		Student stu1 = new Student(102, "Bikkad");
+		System.out.println(stu1);
+
+	}
+
+}
+
+
+Example 6:
+
+package setterGetter;
+
+public class Student {
+
+	private int rollno;
+
+	private String name;
+
+	public int getRollno() {
+		return rollno;
+	}
+
+	public void setRollno(int rollno) {
+		this.rollno = rollno;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+
+	
+	
+	
+	
+}
+
+
+
+
+package setterGetter;
+
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("ENter roll no");
+		int rollno=sc.nextInt();
+		
+		Student stu = new Student();
+		stu.setRollno(rollno);
+		stu.setName("Santosh");
+
+		System.out.println(stu.getRollno());
+		System.out.println(stu.getName());
+
+		Student stu1 = new Student();
+		stu1.setRollno(102);
+		stu1.setName("Bikkad");
+
+		System.out.println(stu1.getRollno());
+		System.out.println(stu1.getName());
+
+	}
+
+}
+

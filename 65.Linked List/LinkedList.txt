@@ -1,0 +1,161 @@
+2) List:
+ It is the Child Interface of Collection.
+ If we want to Represent a Group of Individual Objects where Duplicates are allowed
+and Insertion Order Preserved. Then we should go for List.
+ We can Preserve Insertion Order and we can Differentiate Duplicate Object by using
+Index. Hence Index will Play Very Important Role in List.
+Methods:List Interface Defines the following Specific Methods.
+
+
+
+
+ ArrayList:
+ The Underlying Data Structure for ArrayList is Resizable Array OR Growable Array.
+ Duplicate Objects are allowed.
+ Insertion Order is Preserved.
+ Heterogeneous Objects are allowed (Except TreeSet and TreeMap Everywhere
+Heterogeneous Objects are allowed).
+ null Insertion is Possible.
+ArrayList is the Best Choice if we want to Perform Retrieval Operation Frequently.
+ But ArrayList is Worst Choice if Our Frequent Operation is Insertion OR Deletion in the
+Middle. Because it required Several Shift Operations Internally.
+
+
+Constructors:
+
+1) ArrayList l = new ArrayList();
+ Creates an Empty ArrayList Object with Default Initial Capacity 10.
+ If ArrayList Reaches its Max Capacity then a New ArrayList Object will be Created
+with
+
+New Capacity = (Current Capacity * 3/2)+1
+
+
+2) ArrayList l = new ArrayList(intinitialCapacity);
+Creates an Empty ArrayList Object with specified Initial Capacity.
+
+
+3) ArrayList l = new ArrayList(Collection c);
+ Creates an EqualentArrayList Object for the given Collection Object.
+ This Constructor Meant for Inter Conversion between Collection Objects.
+
+
+
+ArrayList Example:
+
+Example:
+
+package demoExample;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+
+public class ArrayListConstr {
+public static void main(String[] args) 
+	
+	
+	
+	HashSet s=new HashSet();
+	s.add("a");
+	s.add("b");
+	System.out.println("set :"+ s);
+	ArrayList al1=new ArrayList<>(s);
+	System.out.println("Arraylist"+al1);
+}
+}
+
+
+
+importjava.util.ArrayList;
+classArrayListDemo {
+public static void main(String[] args){
+ArrayList l = new ArrayList();
+l.add("A");
+l.add(10);
+l.add("A");
+l.add(null);
+System.out.println(l); //[A, 10, A, null]
+l.remove(2);
+System.out.println(l); //[A, 10, null]
+l.add(2,"M");
+l.add("N");
+System.out.println(l); //[A, 10, M, null, N]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2)Linkedlist
+
+ The Underlying Data Structure is Double LinkedList.
+ Insertion Order is Preserved.
+ Duplicate Objects are allowed.
+ Heterogeneous Objects are allowed.
+ null Insertion is Possible.
+ Implements Serializable and Cloneable Interfaces but Not RandomAccessInterface.
+ Best Choice if Our Frequent Operation is InsertionOR Deletion in the Middle.
+ Worst Choice if Our Frequent Operation is Retrieval.
+
+
+When to use ArrayList and When to use LinkedList?
+
+ArrayList is the Best Choice if we want to Perform Retrieval Operation Frequently.
+ But ArrayList is Worst Choice if Our Frequent Operation is Insertion OR Deletion in the
+Middle. Because it required Several Shift Operations Internally.
+
+ Best Choice if Our Frequent Operation is InsertionOR Deletion in the Middle.
+ Worst Choice if Our Frequent Operation is Retrieval.
+
+
+Constructors:
+1) LinkedList l = new LinkedList(); Creates an Empty LinkedList Object.
+2) LinkedList l = new LinkedList(Collection c);
+Creates an Equivalent LinkedList Object for the given Collection.
+
+
+Example:
+
+
+package linkedlist;
+
+import java.util.LinkedList;
+
+public class LinkedListDemo {
+
+	public static void main(String[] args) {
+		
+		LinkedList ll=new LinkedList();
+		ll.add(1);
+		ll.add(2);
+		ll.add(1);
+		ll.add(3,"Pune");
+		ll.add("Santosh");
+		ll.add("Bikkad");
+		ll.add(null);
+		ll.add(null);
+		System.out.println(ll);
+		
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+

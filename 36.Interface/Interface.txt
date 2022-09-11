@@ -1,0 +1,199 @@
+Interface: Interface is mechanism to achieve abstraction in java .
+Interface is similar to abstract class but having all methods are abstract type i.e it can not have method body.
+Interface is just like class which contains abstract methods only.(upto 1.7 version only).
+By using interface keyword we can create interface.
+To achieve interface java provides "implements" keyword.
+
+Example : package interfacedemo;
+
+public interface A {
+
+}
+
+1)Interface methods are bydefault public and abstract.
+
+package interfacedemo;
+
+public interface A {
+
+  void show();
+  
+  public abstract void display();
+  
+  
+}
+
+2)we can not take non abstract method in interface.
+
+package interfacedemo;
+
+public interface A {
+
+  void show();
+  
+  public abstract void display();
+  
+  public void find() {
+	  
+  }
+}
+
+
+3)Interface variables are bydefault public ,static ,final.
+
+package interfacedemo;
+
+public interface A {
+
+	public static final int x = 10;
+	int y = 20;
+}
+
+4)since java 8 ,we can have default and static methods in interface.
+
+package interfacedemo;
+
+public interface A {
+
+	default void show() {
+
+	}
+
+	static void dispaly() {
+
+	}
+}
+
+
+5)since java 9 we can have private methods in interface.
+
+package interfacedemo;
+
+public interface A {
+
+	private void show() {
+
+	}
+
+}
+
+
+6) we can not create object of interface.
+
+package interfacedemo;
+
+public interface A {
+
+	private void show() {
+
+		A a=new A();
+	}
+
+}
+
+
+Example :
+
+package interfacedemo;
+
+public interface SBI {
+
+	public abstract void design();
+	
+	public abstract void development();
+}
+
+
+
+
+package interfacedemo;
+
+public class TCS implements SBI{
+
+	@Override
+	public void design() {
+		
+		System.out.println("Design completed");
+	}
+
+	@Override
+	public void development() {
+		System.out.println("development completed");
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	//	SBI sbi=new SBI();
+		
+		TCS tcs=new TCS();
+		tcs.design();
+		tcs.development();
+		
+		SBI sbi=new TCS();
+		sbi.design();
+		sbi.development();
+		
+	}
+
+}
+
+
+Example 2:
+
+package interfacedemo;
+
+public interface SBI {
+
+	public abstract void design();
+	
+	public abstract void development();
+}
+
+
+
+
+package interfacedemo;
+
+public abstract class TCS implements SBI{
+
+	@Override
+	public void design() {
+		
+		System.out.println("Design completed");
+	}
+
+
+}
+
+
+package interfacedemo;
+
+public class Infosys extends TCS{
+
+	@Override
+	public void development() {
+		System.out.println("devevelopment done");
+		
+	}
+   public static void main(String[] args) {
+	
+	   Infosys infosys=new Infosys();
+	   infosys.design();
+	   infosys.development();
+	   SBI sbi=new Infosys();
+	   sbi.design();
+	   sbi.development();
+}
+	
+}
+
+
+
+
+
+
+
+
+
+

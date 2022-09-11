@@ -1,0 +1,84 @@
+Method Overriding : Whenever we writting method in super/Parent class and Sub/Child in such way that 
+method name and method parameters must be same is called as Method Overriding.
+
+
+Example 1: IS A relationship 
+
+package methodOverrding;
+
+public class Parent {
+
+	public void show() {
+		System.out.println("Parent class Show method");
+	}
+}
+
+
+package methodOverrding;
+
+public class Child  extends Parent{
+
+	public void show1() {
+		System.out.println("Child class Show1 Method");
+	}
+	
+	public static void main(String[] args) {
+		
+		Parent p=new Parent();
+		p.show();
+		//p.show1();
+		
+		Child c=new Child();
+		c.show();
+		c.show1();
+		
+		Parent p1=new Child();
+		p1.show();
+	//	p1.show1();
+		
+		//Child c=new Parent();
+	}
+}
+
+
+Example 2:
+
+
+
+package methodOverrding;
+
+public class Parent {
+
+	public void show() {
+		System.out.println("Parent class Show method");
+	}
+	
+
+}
+
+
+
+package methodOverrding;
+
+public class Child  extends Parent{
+
+	public void show() {
+		System.out.println("Child class Show Method");
+	}
+	
+	public static void main(String[] args) {
+		
+		Parent p=new Parent();
+		p.show();
+		
+		Child c=new Child();
+		c.show();
+		
+		Parent p1=new Child();
+		p1.show();
+		
+		//Child c=new Parent();
+	}
+}
+
+

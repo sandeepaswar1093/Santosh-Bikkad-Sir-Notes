@@ -1,0 +1,175 @@
+Access Modifier:
+
+Types Of Access Modifier:
+
+1)Private
+2)deafult
+3)Protected
+4)public
+
+1)Private :
+
+
+package privateAccessModifier;
+
+public class PrivateDemo1 {
+
+	private int a=10;
+	
+	private void display() {
+		System.out.println("Private Access Modifier");
+	}
+	
+	public static void main(String[] args) {
+		PrivateDemo1 p=new PrivateDemo1();
+		System.out.println(p.a);
+		p.display();
+	}
+}
+
+we can not access outside class
+
+package privateAccessModifier;
+
+public class PrivateDemo2 {
+
+	public static void main(String[] args) {
+		PrivateDemo1 p=new PrivateDemo1();
+		System.out.println(p.a);
+		p.display();
+	}
+}
+
+
+
+2)Default:
+
+package defaultAccessModifier;
+
+public class DefaultDemo1 {
+
+	int a=10;
+	
+	void display() {
+		System.out.println("Default Access Modifier");
+	}
+	
+	public static void main(String[] args) {
+		
+		DefaultDemo1 d=new DefaultDemo1();
+		System.out.println(d.a);
+		d.display();
+	}
+}
+
+
+package defaultAccessModifier;
+
+public class DefaultDemo2 {
+
+public static void main(String[] args) {
+		
+		DefaultDemo1 d=new DefaultDemo1();
+		System.out.println(d.a);
+		d.display();
+	}
+}
+
+
+3)Protected :
+
+
+package protectedAccessModifier;
+
+public class ProtectedDemo1 {
+
+	protected int a=10;
+	
+	protected void display() {
+		System.out.println("Protected access Modifier");
+	}
+	
+	public static void main(String[] args) {
+		
+		ProtectedDemo1 p=new ProtectedDemo1();
+		System.out.println(p.a);
+		p.display();
+	}
+}
+
+
+package protectedAccessModifier;
+
+public class ProtectedDemo2 {
+
+public static void main(String[] args) {
+		
+		ProtectedDemo1 p=new ProtectedDemo1();
+		System.out.println(p.a);
+		p.display();
+	}
+}
+
+
+package protectedAccessModifeir2;
+
+
+
+public class ProtectedDemo3 extends protectedAccessModifier.ProtectedDemo1 {
+
+	public static void main(String[] args) {
+		
+		ProtectedDemo3 p=new ProtectedDemo3();
+		System.out.println(p.a);
+		p.display();
+	}
+
+}
+
+4) Public :
+
+
+
+package publicAccessModifier1;
+
+public class PublicDemo1 {
+
+	public int a=10;
+	
+	public void display() {
+		System.out.println("Public Access Modifier");
+	}
+	public static void main(String[] args) {
+		PublicDemo1 p=new PublicDemo1();
+		System.out.println(p.a);
+		p.display();
+	}
+}
+
+
+package publicAccessModifier1;
+
+public class PublicDemo2 {
+
+	public static void main(String[] args) {
+		PublicDemo1 p=new PublicDemo1();
+		System.out.println(p.a);
+		p.display();
+	}
+}
+
+
+
+package publicAccessModifier2;
+
+import publicAccessModifier1.PublicDemo1;
+
+public class PublicDemo3 {
+
+	public static void main(String[] args) {
+		PublicDemo1 p=new PublicDemo1();
+		System.out.println(p.a);
+		p.display();
+	}
+}
+

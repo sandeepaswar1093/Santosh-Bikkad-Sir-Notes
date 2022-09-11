@@ -1,0 +1,190 @@
+SET:
+
+ It is the Child Interface of Collection.
+  If we want to Represent a Group of Individual Objects as a Single Entity where Duplicates are Not allowed and 
+Insertion Order is Not Preserved then we should go for Set.
+  Set Interface doesn't contain any New Methods and Hence we have to Use Only Collection Interface Methods 
+
+1)HashSet
+
+The Underlying Data Structure is Hashtable.
+  Insertion Order is Not Preserved and it isBased on hashCode of the Objects.
+  Duplicate Objects are Not Allowed. 
+If we are trying to Insert Duplicate Objects then we won't get any Compile Time OR Runtime Error.add() Simply 
+Returns false. 
+null Insertion is Possible.
+  Heterogeneous objects are allowed.
+  HashSet implements Serializable and Cloneable Interfaces but Not RandomAccess.
+  If Our Frequent Operation is Search Operation, then HashSet is the Best Choice. 
+
+
+Constructors: 
+ 
+1) HashSet h = new HashSet();Creates an Empty HashSet Object with Default Initial Capacity 16 and Default Fill Ratio : 0.75. 
+ 
+2) HashSet h = new HashSet(intinitial Capacity); Creates an Empty HashSet Object with specified Initial Capacity and
+ Default Fill Ratio : 0.75. 
+ 
+3) HashSet h = new HashSet(intinitialCapacity, float fillRatio); 
+ 
+4) HashSet h = new HashSet(Collection c); 
+
+
+Example:
+
+package setbasics;
+
+import java.util.HashSet;
+
+public class SetDemo {
+
+	public static void main(String[] args) {
+		
+		HashSet s=new HashSet<>();
+		s.add(1);
+		s.add(2);
+		s.add(3);
+	        s.add(null);
+		s.add("santosh");
+		System.out.println(s);
+		System.out.println(s.add(2));
+		System.out.println(s.add(4));
+		System.out.println(s);
+	}
+
+}
+
+Example :
+
+class HashSet1{  
+ public static void main(String args[]){  
+  //Creating HashSet and adding elements  
+    HashSet<String> set=new HashSet();  
+           set.add("One");    
+           set.add("Two");    
+           set.add("Three");   
+           set.add("Four");  
+           set.add("Five");  
+           Iterator<String> i=set.iterator();  
+           while(i.hasNext())  
+           {  
+           System.out.println(i.next());  
+           }  
+ }  
+}
+
+Example:
+
+
+class Book {  
+int id;  
+String name,author,publisher;  
+int quantity;  
+public Book(int id, String name, String author, String publisher, int quantity) {  
+    this.id = id;  
+    this.name = name;  
+    this.author = author;  
+    this.publisher = publisher;  
+    this.quantity = quantity;  
+}  
+}  
+public class HashSetExample {  
+public static void main(String[] args) {  
+    HashSet<Book> set=new HashSet<Book>();  
+    //Creating Books  
+    Book b1=new Book(101,"Let us C","Yashwant Kanetkar","BPB",8);  
+    Book b2=new Book(102,"Data Communications & Networking","Forouzan","Mc Graw Hill",4);  
+    Book b3=new Book(103,"Operating System","Galvin","Wiley",6);  
+    //Adding Books to HashSet  
+    set.add(b1);  
+    set.add(b2);  
+    set.add(b3);  
+    //Traversing HashSet  
+    for(Book b:set){  
+    System.out.println(b.id+" "+b.name+" "+b.author+" "+b.publisher+" "+b.quantity);  
+    }  
+
+
+       Iterator iterator = hashSet.iterator();
+		
+		while(iterator.hasNext()) {
+			Book next = (Book) iterator.next();
+			System.out.println(next);
+		}
+}  
+}    
+
+2)LinkedHashSet:
+
+3.1.1) LinkedHashSet:  It is the Child Class of HashSet.  It is Exactly Same as HashSet Except the following Differences. 
+
+ HashSet                                                         LinkedHashSet 
+The Underlying Data Structure is Hashtable. 
+                                                              The Underlying Data Structure is a Combination of LinkedList and Hashtable. 
+Insertion Order is Not Preserved.                             Insertion Order will be Preserved. 
+Introduced in 1.2 Version.                                       Introduced in 1.4 Version. 
+
+
+public class LinkedHashSetDemo {
+
+public static void main(String[] args) {
+		
+		LinkedHashSet s=new LinkedHashSet<>();
+		s.add(1);
+		s.add(2);
+		s.add(3);
+	        s.add(null);
+		s.add("santosh");
+		System.out.println(s);
+		System.out.println(	s.add(2));
+		System.out.println(	s.add(4));
+		System.out.println(s);
+	}
+
+}
+
+
+ 
+ How to remove Duplicates From List:
+
+
+
+package set;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class RemoveDuplicatesFromList {
+
+	public static void main(String[] args) {
+		
+		List l=new ArrayList();
+		l.add("Santosh");
+		l.add("Bikkad");
+		l.add("Santosh");
+		l.add("Bikkad");
+		
+		System.out.println(l);
+		
+		Set s=new HashSet(l);
+		System.out.println(s);
+		
+		
+	}
+	
+}
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+

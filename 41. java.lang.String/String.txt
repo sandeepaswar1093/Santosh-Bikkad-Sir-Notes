@@ -1,0 +1,140 @@
+java.lang Package:
+==================
+It is bydefault available.
+No need to import while using classes of java.lang Package.
+
+Example :
+
+package java.langPckg;
+
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+		String s=new String();
+		
+		StringBuffer sb=new StringBuffer();
+		
+		Scanner sc=new Scanner(System.in);
+		
+		ArrayList al=new ArrayList();
+	}
+	
+	
+}
+
+
+
+String : String is predefinied class in java.
+It allow us to store sequence of charactors into a double quote("").
+We can store charactors which contains alphabets and numbers.
+
+Note : Garbage collector is not responcible to access scp(String constant pool) area 
+hence garbage collector is not resoncible to destory String objects.
+Garbage collector will destory only heap area object. 
+
+There are two types of creating String Objects:
+
+1) String literal
+2)By using new Keyword.
+
+
+1) String literal: In this case only one object will be created in scp area and object referance 
+is pointing to that scp area object.
+
+Example 1:
+
+package takingInput;
+
+public class StringDemo {
+
+	public static void main(String[] args) {
+		
+		String s1="Santosh";
+		System.out.println(s1);
+	}
+}
+
+Example 2:
+
+package takingInput;
+
+public class StringDemo {
+
+	public static void main(String[] args) {
+		
+		String s="Santosh";
+		System.out.println(s);
+		
+		String s1="Bikkad";
+		System.out.println(s1);
+	}
+}
+
+
+2)By using new Keyword: In this case two objects will be created.
+One object will be created in heap area and one object will be created in scp area.
+but object referance will be pointing to heap area object.
+
+Example :
+
+package takingInput;
+
+public class StringDemo {
+
+	public static void main(String[] args) {
+		
+		String s=new String("Bikkad");
+		System.out.println(s);
+	}
+}
+
+
+
+Example1 :
+          
+package takingInput;
+
+public class StringDemo {
+
+	public static void main(String[] args) {
+		
+		String s=new String("Bikkad");
+		System.out.println(s);
+		
+		String s1=new String("Santy");
+		System.out.println(s1);
+	}
+}
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

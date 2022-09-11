@@ -1,0 +1,59 @@
+TypeCasting: converting one data type into another data type is called as typecasting.
+===========
+
+TypeCasting Types:
+
+1)Implicit Typecasting:
+It is automatically done by compiler is called as implicit Typecasting.
+
+Example :
+
+package typeCasting;
+
+public class ImplicitTypeCasting {
+
+	public static void main(String[] args) {
+		
+		int A=100;
+		System.out.println(A);
+		
+		double d=A;
+		System.out.println(d);
+	}
+	
+	
+	
+}
+
+
+2)Explicit Typecasting.
+
+Programmer is responcible to perform explicit typecasting.
+
+Example :
+
+package typeCasting;
+
+public class ExplicitTypeCasting {
+
+	public static void main(String[] args) {
+		
+		double d=100.50;
+		System.out.println(d);
+		int a=(int)d;
+		System.out.println(a);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

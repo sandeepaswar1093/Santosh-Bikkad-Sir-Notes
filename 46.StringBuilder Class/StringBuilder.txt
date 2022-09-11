@@ -1,0 +1,16 @@
+StringBuilder: It is introduced in java 1.5 version.
+1) Every method present in StringBuffer is synchronized hence at a time only one Thread will be 
+allowed to operate on the StringBuffer Object due to this waiting time of Thred will be increased
+and it effects the perfomance of system.
+To Overcome this problem String Builder came into picture.
+
+
+String vs StringBuffer vs StringBuilder:
+
+1) If the content is fixed and wont change frequently then we should go for String.
+
+2)If the content will change frequently but Thread safety is required then we should 
+go for StringBuffer.
+
+3)If the content will change frequently but Thread safety is not required then we should 
+go for StringBuilder.

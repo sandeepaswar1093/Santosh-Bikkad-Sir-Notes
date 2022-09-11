@@ -1,0 +1,293 @@
+Finally block:
+
+Finally block always executed there is exception in try block or there is no exception in try block.
+
+Example : 1) If database connection is open that connection colse inside finally block.
+1) If file is open then file should be close inside finally block.
+
+Syntax:
+
+1) 
+
+                try {
+		
+		}catch(ArithmeticException e) {
+			
+		}
+		finally {
+			
+		}
+
+
+2)             try {
+	         }
+		finally {
+			
+		}
+3) one try block can have only one finally block.
+
+           try {
+		}
+		finally {
+			
+		}
+		finally {
+			
+		}
+
+4)finally block should be at bottom .
+
+   try {
+		}
+       finally {
+			
+		} 
+		catch(ArithmeticException e) {
+			
+		}
+
+
+Rule 1: If there is exception in try block then finally block will be Executed.
+
+Example :
+
+
+package finallyblock;
+
+public class FinallyDemo {
+
+	public static void main(String[] args) {
+		
+		try {
+			int a=10;
+			int b=0;
+			int c=a/b;
+		}
+		catch(ArithmeticException e) {
+			System.out.println(e);
+		}finally {
+			System.out.println("finally block executed");
+		}
+		
+		
+	}
+	
+}
+
+
+Rule no 2:If there is no exception in try block then finally block will be exceuted.
+
+
+package finallyblock;
+
+public class FinallyDemo {
+
+	public static void main(String[] args) {
+		
+		try {
+			int a=10;
+			int b=2;
+			int c=a/b;
+			System.out.println(c);
+		}
+		catch(ArithmeticException e) {
+			System.out.println(e);
+		}finally {
+			System.out.println("finally block executed");
+		}
+	
+	}
+	
+}
+
+
+
+Rule No 3: If exception occured in try block and respective catch block exception will not be 
+matched then finally block will be executed.
+
+
+Example :
+
+package finallyblock;
+
+public class Rule3 {
+
+	
+	public static void main(String[] args) {
+		
+		int a=10;
+		int b=0;
+		try {
+		int c=a/b;
+		}catch(NullPointerException n) {
+			System.out.println(n.getMessage());
+		}
+		finally{
+			System.out.println("Finally block");
+		}
+	}
+}
+
+
+Rule no 4: If there is an exception in catch block and we are not handling that exception then finally block will be
+executed but that is abnornal termination.
+
+Example :
+
+package finallyblock;
+
+public class Rule4 {
+
+	public static void main(String[] args) {
+
+		int a = 10;
+		int b = 0;
+		try {
+			int c = a / b;
+
+		} catch (ArithmeticException e) {
+			System.out.println(e.getMessage());
+         String s=null;
+			System.out.println(s.length());
+		}finally {
+			System.out.println("Finally block");
+		}
+	}
+
+}
+
+
+
+
+Rule no 5: If there is an exception in catch block and we are handling that exception then finally block will be
+executed but that is nornal termination of program.
+
+package finallyblock;
+
+public class Rule4 {
+
+	public static void main(String[] args) {
+
+		int a = 10;
+		int b = 0;
+		try {
+			int c = a / b;
+
+		} catch (ArithmeticException e) {
+			System.out.println(e.getMessage());
+         String s=null;
+         try {
+         
+			System.out.println(s.length());
+         }catch(NullPointerException n) {
+        	 System.out.println(n.getMessage());
+         }
+		}finally {
+			System.out.println("Finally block");
+		}
+	}
+
+}
+
+
+Rule 6: If there is exception in finally block then remaining line of code in finally block will not be executed
+and that is abnormal termination.
+
+Example :
+
+
+package finallyblock;
+
+public class Rule4 {
+
+	public static void main(String[] args) {
+
+		int a = 10;
+		int b = 0;
+		try {
+			int c = a / b;
+
+		} catch (ArithmeticException e) {
+			System.out.println(e.getMessage());
+
+		} finally {
+			System.out.println("Finally block");
+			String s = null;
+           System.out.println(s.length());
+      System.out.println("Welcome to bikkad IT");
+		}
+	}
+
+}
+
+
+
+
+
+Rule 7: If there is exception in finally block and we are handling that exception then
+ that is normal termination.
+
+
+
+package finallyblock;
+
+public class Rule4 {
+
+	public static void main(String[] args) {
+
+		int a = 10;
+		int b = 0;
+		try {
+			int c = a / b;
+
+		} catch (ArithmeticException e) {
+			System.out.println(e.getMessage());
+
+		} finally {
+			System.out.println("Finally block");
+			String s = null;
+			try {
+           System.out.println(s.length());
+			}catch(NullPointerException n) {
+				System.out.println(n.getMessage());
+			}
+      System.out.println("Welcome to bikkad IT");
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

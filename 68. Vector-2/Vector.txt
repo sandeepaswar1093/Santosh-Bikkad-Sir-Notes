@@ -1,0 +1,138 @@
+The 3 Cursors of Java:
+ If we want to get Objects One by One from the Collection then we should go for Cursors.
+ There are 3 Types of Cursors Available in Java.
+1) Enumeration
+2) Iterator
+3) ListIterator
+
+1) Enumeration:
+ We can Use Enumeration to get Objects One by One from the Collection.
+ We can Create Enumeration Object by using elements().
+public Enumeration elements();
+Eg:Enumeration e = v.elements(); //v is Vector Object.
+
+Methods:
+1) public boolean hasMoreElements();
+2) public Object nextElement();
+
+Example:
+
+package cursors;
+
+import java.util.Enumeration;
+import java.util.Vector;
+
+public class EnumerationDemo {
+
+	public static void main(String[] args) {
+		
+		/*
+		 * Vector v=new Vector(); v.addElement(1); v.addElement(2); v.addElement(3);
+		 * v.addElement(4); v.addElement(5); v.addElement(6); v.addElement(null);
+		 * v.addElement(8); v.addElement(9); v.addElement(10); System.out.println(v);
+		 * 
+		 * Enumeration e = v.elements();
+		 * 
+		 * while(e.hasMoreElements()) { Integer element = (Integer) e.nextElement();
+		 * System.out.println(element);
+		 * 
+		 * }
+		 */
+		
+		
+		Vector v=new Vector();
+		v.addElement("Santosh");
+		v.addElement("Bikkad");
+		v.addElement("Pune");
+		v.add(22);
+		
+		System.out.println(v);
+		
+		Enumeration e = v.elements();
+		
+		while(e.hasMoreElements()) {
+			Object element =  e.nextElement();
+		
+			System.out.println(element);
+			
+		}
+		
+	}
+}
+
+
+
+
+
+
+
+Limitations of Enumeration:
+ Enumeration Concept is Applicable Only for Legacy Classes and it is Not a Universal
+Cursor.
+ By using Enumeration we can Perform Read Operation and we can't Perform Remove
+Operation.
+To Overcome Above Limitations we should go for Iterator.
+
+
+
+
+2) Iterator:
+ We can Use Iterator to get Objects One by One from Collection.
+ We can Apply Iterator Concept for any Collection Object. Hence it is Universal Cursor.
+ By using Iterator we can Able to Perform Both Read and Remove Operations.
+ We can Create Iterator Object by using iterator() of Collection Interface.
+public Iterator iterator();
+Eg:Iterator itr = c.iterator(); //c Means any Collection Object.
+Methods:
+1) public boolean hasNext()
+2) public Object next()
+3) public void remove()
+
+
+Example :
+
+package cursors;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class IteratorDemo {
+
+	public static void main(String[] args) {
+
+		ArrayList al = new ArrayList();
+		al.add("Santosh");
+		al.add("Bikkad");
+		al.add("Bikkad");
+		al.add("BikkadIT");
+		al.add("Pune");
+
+		for (int i = 0; i < al.size(); i++) {
+
+			System.out.println(al.get(i));
+
+		}
+
+		for (Object i1 : al) {
+
+			System.out.println(i1);
+
+		}
+
+		Iterator iterator = al.iterator();
+
+		while(iterator.hasNext()) {
+			   String next = (String) iterator.next();
+			   if(next.equals("Bikkad")) {
+			   iterator.remove();
+			   }
+			 
+		}
+		System.out.println(al);  
+	}
+}
+
+
+
+
+

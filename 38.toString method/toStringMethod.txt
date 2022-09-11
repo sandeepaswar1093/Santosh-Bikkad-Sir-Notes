@@ -1,0 +1,264 @@
+toString Method:
+
+Example 1:
+
+package toString;
+
+public class Student {
+
+	 int rollno;
+	 
+	 String name;
+	
+	public static void main(String[] args) {
+		
+		Student s=new Student();
+		s.rollno=11;
+		s.name="Santosh";
+		
+		System.out.println(s.rollno);
+		System.out.println(s.name);
+		
+		Student s1=new Student();
+		s1.rollno=22;
+		s1.name="Mangesh";
+		
+		System.out.println(s1.rollno);
+		System.out.println(s1.name);
+	}
+}
+
+Example 2:
+
+package toString;
+
+public class Student {
+
+	 int rollno;
+	 
+	 String name;
+	
+	 public void display() {
+		 System.out.println(rollno);
+		 System.out.println(name);
+	 }
+	public static void main(String[] args) {
+		
+		Student s=new Student();
+		s.rollno=11;
+		s.name="Santosh";
+		s.display();
+		
+		
+		Student s1=new Student();
+		s1.rollno=22;
+		s1.name="Mangesh";
+		s1.display();
+		
+	}
+}
+
+Example 3:
+
+package toString;
+
+public class Student {
+
+	 int rollno;
+	 
+	 String name;
+	
+	 public String display() {
+		 
+		 return "RollNo: "+rollno+"  Name: "+name;
+	 }
+	public static void main(String[] args) {
+		
+		Student s=new Student();
+		s.rollno=11;
+		s.name="Santosh";
+		System.out.println(s.display());
+		
+		
+		Student s1=new Student();
+		s1.rollno=22;
+		s1.name="Mangesh";
+	 System.out.println(s1.display());
+		
+	}
+}
+
+Example 4:
+
+package toString;
+
+public class Student {
+
+	 int rollno;
+	 
+	 String name;
+	
+	 public String toString() {
+		 
+		 return "RollNo: "+rollno+"  Name: "+name;
+	 }
+	public static void main(String[] args) {
+		
+		Student s=new Student();
+		s.rollno=11;
+		s.name="Santosh";
+		System.out.println(s.toString());
+		
+		
+		Student s1=new Student();
+		s1.rollno=22;
+		s1.name="Mangesh";
+	 System.out.println(s1.toString());
+		
+	}
+}
+
+
+Example 5:
+
+
+package toString;
+
+public class Student {
+
+	int rollno;
+
+	String name;
+
+	@Override
+	public String toString() {
+		return "Student [rollno=" + rollno + ", name=" + name + "]";
+	}
+
+	public static void main(String[] args) {
+
+		Student s = new Student();
+		s.rollno = 11;
+		s.name = "Santosh";
+		System.out.println(s.toString());
+
+		Student s1 = new Student();
+		s1.rollno = 22;
+		s1.name = "Mangesh";
+		System.out.println(s1.toString());
+
+	}
+}
+
+
+Example 6:
+
+
+package toString;
+
+public class Student {
+
+	int rollno;
+
+	String name;
+
+	@Override
+	public String toString() {
+		return "Student [rollno=" + rollno + ", name=" + name + "]";
+	}
+
+	public static void main(String[] args) {
+
+		Student s = new Student();
+		s.rollno = 11;
+		s.name = "Santosh";
+		System.out.println(s);
+
+		Student s1 = new Student();
+		s1.rollno = 22;
+		s1.name = "Mangesh";
+		System.out.println(s1);
+
+	}
+}
+
+
+Example 7:
+
+
+package toString;
+
+public class Student {
+
+	int rollno;
+
+	String name;
+
+	String address;
+
+	Long phno;
+
+	@Override
+	public String toString() {
+		return "Student [rollno=" + rollno + ", name=" + name + ", address=" + address + ", phno=" + phno + "]";
+	}
+
+	public static void main(String[] args) {
+
+		Student s = new Student();
+		s.rollno = 11;
+		s.name = "Santosh";
+		s.address = "Pune";
+		s.phno = 8983536L;
+		System.out.println(s.toString());
+
+		Student s1 = new Student();
+		s1.rollno = 22;
+		s1.name = "Mangesh";
+		s1.address = "Aurangabad";
+		s1.phno = 897677L;
+		System.out.println(s1);
+
+	}
+}
+
+
+Example 8:
+
+
+package toString;
+
+public class Student {
+
+	int rollno;
+
+	String name;
+
+	String address;
+
+	Long phno;
+
+	@Override
+	public String toString() {
+		return "Student [rollno=" + rollno + ", name=" + name + ", address=" + address + ", phno=" + phno + "]";
+	}
+
+	public static void main(String[] args) {
+
+		Student s = new Student();
+		s.rollno = 11;
+		s.name = "Santosh";
+		s.address = "Pune";
+		s.phno = 8983536L;
+		System.out.println(s.toString());
+
+		Student s1 = new Student();
+		s1.rollno = 22;
+		s1.name = "Mangesh";
+		s1.address = "Aurangabad";
+		
+		System.out.println(s1);
+
+	}
+}
+

@@ -1,0 +1,196 @@
+Method : Method is group /block of code .
+
+
+Syntax: AccressModifier return-Type MethodName(Arguments){
+
+//code
+}
+
+
+Advantages : 1) Decrease line of code.
+             2) Repeatation
+             3) Redability.
+
+
+Example 1:
+
+package methods;
+
+public class Demo {
+
+	public void welcomeMsg() {
+
+		System.out.println("Welcome to bikkad IT");
+		System.out.println("Welcome to bikkad IT");
+		System.out.println("Welcome to bikkad IT");
+		System.out.println("Welcome to bikkad IT");
+		System.out.println("Welcome to bikkad IT");
+		System.out.println("Welcome to bikkad IT");
+		System.out.println("Welcome to bikkad IT");
+		System.out.println("Welcome to bikkad IT");
+		System.out.println("Welcome to bikkad IT");
+		System.out.println("Welcome to bikkad IT");
+
+	}
+       public static void main(String[] args) {
+      System.out.println("Main Method Started");
+      
+      Demo d=new Demo();
+      d.welcomeMsg();
+      d.welcomeMsg();
+      d.welcomeMsg();
+      d.welcomeMsg();
+      d.welcomeMsg();
+      d.welcomeMsg();
+      d.welcomeMsg();
+      d.welcomeMsg();
+      d.welcomeMsg();
+      d.welcomeMsg();
+       }
+      }
+
+
+Example 2: without static variable
+
+package methods;
+
+public class Addition {
+
+	public void AdditionOfTwoNos() {
+		int a = 25;
+		int b = 50;
+		int c = a + b;
+		System.out.println("Addition of a And b=" + c);
+
+	}
+
+	public static void main(String[] args) {
+
+		Addition ad = new Addition();
+		ad.AdditionOfTwoNos();
+		ad.AdditionOfTwoNos();
+	}
+}
+
+
+Example 3:Without static variable method calling
+
+
+
+
+
+Example 4:   With static variable method calling
+
+package methods;
+
+public class Addition {
+
+	public static  void AdditionOfTwoNos() {
+		int a = 25;
+		int b = 50;
+		int c = a + b;
+		System.out.println("Addition of a And b=" + c);
+
+	}
+
+	public static void main(String[] args) {
+
+		Addition.AdditionOfTwoNos();
+		Addition.AdditionOfTwoNos();
+	}
+}
+
+
+package methods;
+
+public class ASMD {
+
+	public  void Add() {
+		int a=5;
+		int b=10;
+		int c=a+b;
+		System.out.println("Addition Of a and b "+c);
+	}
+	
+	public  void sub() {
+		int a1=5;
+		int b1=10;
+		int c1=b1-a1;
+		System.out.println(c1);
+	}
+	
+	public void mul() {
+		int a2=5;
+		int b2=10;
+		int c2=b2*a2;
+		System.out.println(c2);
+	}
+	
+	public void div() {
+		int a3=10;
+		int b3=50;
+		int c3=a3/b3;
+		System.out.println(c3);
+	}
+	public static void main(String[] args) {
+	
+		ASMD a=new ASMD();
+		a.Add();
+		a.sub();
+		a.mul();
+		a.div();
+		
+	}
+}
+
+
+
+Example 4:    With static variable method calling
+
+
+
+
+package methods;
+
+public class ASMD {
+
+	public static void Add() {
+		int a=5;
+		int b=10;
+		int c=a+b;
+		System.out.println("Addition Of a and b "+c);
+	}
+	
+	public static void sub() {
+		int a1=5;
+		int b1=10;
+		int c1=b1-a1;
+		System.out.println(c1);
+	}
+	
+	public static void mul() {
+		int a2=5;
+		int b2=10;
+		int c2=b2*a2;
+		System.out.println(c2);
+	}
+	
+	public static void div() {
+		int a3=10;
+		int b3=50;
+		int c3=a3/b3;
+		System.out.println(c3);
+	}
+	public static void main(String[] args) {
+	
+		ASMD.Add();
+		ASMD.sub();
+		ASMD.mul();
+		ASMD.div();
+		
+	}
+}
+
+
+
+

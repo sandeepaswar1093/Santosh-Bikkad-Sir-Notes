@@ -1,0 +1,167 @@
+Byte :
+
+Example:
+
+public class ByteDemo {
+
+	public static void main(String[] args) {
+		
+		byte b=12;
+		System.out.println(b);
+		
+		//range -128 to +127
+		
+		byte b1=127;
+		System.out.println(b1);
+		
+		//byte b2=128; we cant store
+		
+		byte b2=-128;
+		System.out.println(b2);
+		
+	//	byte b3=-129; we cant store
+		
+	}
+}
+
+2)short :
+
+public class ShortDemo {
+
+	public static void main(String[] args) {
+		
+		short s=333;
+		System.out.println(s);
+		
+		//range -32768 to +32767
+		short s1=32767;
+		System.out.println(s1);
+		
+		//short s2=32768; we cant store
+		
+		short s3=-32768;
+		System.out.println(s3);
+
+		
+		//short s4=-32769; we cant store
+	}
+}
+
+
+3) int :
+
+public class IntDemo {
+
+	public static void main(String[] args) {
+		
+		int i=32999;
+		System.out.println(i);
+		
+		//range -2147483648 to +2147483647
+		int i2=+2147483647;
+		System.out.println(i2);
+		
+		//int i3=+2147483648; we cant store
+		
+		int i4=-2147483648;
+		System.out.println(i4);
+		
+		//int i5=-2147483649; we cant store
+		
+	}
+}
+
+
+Long:
+
+
+public class LongDemo {
+
+	public static void main(String[] args) {
+		
+		//range -9223372036854775808L to  +9223372036854775807L
+	
+		long l=+9223372036854775807L;
+		System.out.println(l);
+		
+		//long l1=+9223372036854775808L; we cant store
+		
+		long l1=-9223372036854775808L;
+		System.out.println(l1);
+		
+		//long l2=-9223372036854775809L; we cant store
+	}
+}
+
+
+float :
+
+
+public class FloatDemo {
+
+	public static void main(String[] args) {
+		
+		float f=12.1111f;
+		System.out.println(f);
+		float f1=10.1111111111111f;
+		System.out.println(f1);
+	}
+}
+
+
+double :
+
+public class DoubleDemo {
+
+	public static void main(String[] args) {
+		
+		double d=12.111111111111111111;
+		System.out.println(d);
+	}
+}
+
+
+char :
+
+
+
+public class CharDemo {
+
+	public static void main(String[] args) {
+		
+		char c='A';
+		System.out.println(c);
+	}
+}
+
+
+
+boolean :
+
+public static void main(String[] args) {
+		
+		boolean b=true;
+		System.out.println(b);
+		
+		boolean b1 =false;
+		System.out.println(b1);
+		
+	//	boolean b3=True;
+		
+	}
+}
+
+
+String :
+
+
+public class StringDemo {
+
+	public static void main(String[] args) {
+		 String s="Santosh";
+		 System.out.println(s);
+		 
+		 String s1="I am java Developer";
+		 System.out.println(s1);
+	}
+}

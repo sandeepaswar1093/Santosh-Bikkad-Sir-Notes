@@ -1,0 +1,209 @@
+Array:
+
+1) Memeory shortage problem in array.
+
+Example:
+
+package arrayTypes;
+
+public class ArrayDemo {
+
+	public static void main(String[] args) {
+		
+		int arr[]=new int[5];
+		arr[0]=10;
+		arr[1]=20;
+		arr[2]=30;
+		arr[3]=40;
+		arr[4]=50;
+		arr[5]=60;
+		
+		for(int i=0;i<5;i++) {
+			System.out.println(arr[i]);
+		}
+		
+	}
+}
+
+
+
+2) Memory wastage problem in array
+
+
+package arrayTypes;
+
+public class ArrayDemo {
+
+	public static void main(String[] args) {
+		
+		int arr[]=new int[5];
+		arr[0]=10;
+		arr[1]=20;
+		arr[2]=30;
+		
+		
+		for(int i=0;i<5;i++) {
+			System.out.println(arr[i]);
+		}
+		
+	}
+}
+
+
+3)Heterogenious elemengts we can not store in array.
+
+
+
+package arrayTypes;
+
+public class ArrayDemo {
+
+	public static void main(String[] args) {
+		
+		int arr[]=new int[5];
+		arr[0]=10;
+		arr[1]=20;
+		arr[2]=30;
+		arr[3]=11.77f;
+		arr[4]=50;
+		
+		
+		for(int i=0;i<5;i++) {
+			System.out.println(arr[i]);
+		}
+		
+	}
+}
+
+1) array declaration and memory allocation
+
+package arrayTypes;
+
+public class StringArray {
+
+	public static void main(String[] args) {
+
+		String arr[] = new String[5];
+		arr[0] = "Santosh";
+		arr[1] = "Tukaram";
+		arr[2] = "Umesh";
+		arr[3] = "rahul";
+		arr[4] = "Ashwin";
+
+		for (int i = 0; i <= 4; i++) {
+			System.out.println(arr[i]);
+		}
+
+	}
+}
+
+
+2)first array declaration and then memory allocation.
+
+package arrayTypes;
+
+public class StringArray {
+
+	public static void main(String[] args) {
+
+		String arr[] ;// array declaration 
+			arr	= new String[5];//memory allocation
+		arr[0] = "Santosh";
+		arr[1] = "Tukaram";
+		arr[2] = "Umesh";
+		arr[3] = "rahul";
+		arr[4] = "Ashwin";
+
+		for (int i = 0; i <= 4; i++) {
+			System.out.println(arr[i]);
+		}
+
+	}
+}
+
+
+3) array declaration ,memory allocation and initialiazation
+
+package arrayTypes;
+
+public class StringArray {
+
+	public static void main(String[] args) {
+
+		String arr[] ={"Santosh","Ashwin","Tukaram","Narayan","Sandip"};// array declaration ,memory allocation and initialiazation
+		
+
+		for (int i = 0; i <= 4; i++) {
+			System.out.println(arr[i]);
+		}
+
+	}
+}
+
+4) Memory shortage problem in array
+
+
+package arrayTypes;
+
+public class StringArray {
+
+	public static void main(String[] args) {
+
+		String arr[] = new String[5];
+		arr[0] = "Santosh";
+		arr[1] = "Tukaram";
+		arr[2] = "Umesh";
+		arr[3] = "rahul";
+		arr[4] = "Ashwin";
+        arr[5]="Sumit";
+		for (int i = 0; i <= 4; i++) {
+			System.out.println(arr[i]);
+		}
+
+	}
+}
+
+
+5)Memory wastage problem in array
+
+package arrayTypes;
+
+public class StringArray {
+
+	public static void main(String[] args) {
+
+		String arr[] = new String[5];
+		arr[0] = "Santosh";
+		arr[1] = "Tukaram";
+		
+		for (int i = 0; i <= 4; i++) {
+			System.out.println(arr[i]);
+		}
+
+	}
+}
+
+
+
+6) Heterogenious elements we can not store in array.
+
+
+package arrayTypes;
+
+public class StringArray {
+
+	public static void main(String[] args) {
+
+		String arr[] = new String[5];
+		arr[0] = "Santosh";
+		arr[1] = "Tukaram";
+		arr[2]=10;
+		for (int i = 0; i <= 4; i++) {
+			System.out.println(arr[i]);
+		}
+
+	}
+}
+
+
+

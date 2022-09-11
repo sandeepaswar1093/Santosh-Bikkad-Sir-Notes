@@ -1,0 +1,227 @@
+Covarient Return Type:
+This feature came into java 1.5 version.
+Before this concept we cant change the return type of overridden method
+ but new concept introdiuced in java that is covarient return type where
+ we can change return type of method while overriding.
+
+Note : Covarient return only applicable for object type not for primitives.
+ According to covarient return type child class method return type need not 
+to be same as parent class method return type its child types are also allowed.
+
+
+Example 1:
+
+package covarientReturnType;
+
+public class Parent {
+
+	public Object m1() {
+		
+		System.out.println("Parent class m1 method");
+		
+		
+		return null;
+	}
+	
+}
+
+
+
+package covarientReturnType;
+
+public class Child extends Parent {
+
+	public Object m1() {
+
+		System.out.println("Child class m1 method");
+
+		return null;
+	}
+
+	public static void main(String[] args) {
+
+		Child c = new Child();
+		c.m1();
+	}
+}
+
+
+Example 2:
+
+package covarientReturnType;
+
+public class Parent {
+
+	public Object m1() {
+
+		System.out.println("Parent class m1 method");
+
+		return null;
+	}
+
+}
+
+
+
+package covarientReturnType;
+
+public class Child extends Parent {
+
+	public Number m1() {
+
+		System.out.println("Child class m1 method");
+
+		return null;
+	}
+
+	public static void main(String[] args) {
+
+		Child c = new Child();
+		c.m1();
+	}
+}
+
+
+Example 3:
+
+
+package covarientReturnType;
+
+public class Parent {
+
+	public Object m1() {
+
+		System.out.println("Parent class m1 method");
+
+		return null;
+	}
+
+}
+
+
+
+package covarientReturnType;
+
+public class Child extends Parent {
+
+	public String m1() {
+
+		System.out.println("Child class m1 method");
+
+		return null;
+	}
+
+	public static void main(String[] args) {
+
+		Child c = new Child();
+		c.m1();
+	}
+}
+
+Example 4:
+
+
+package covarientReturnType;
+
+public class Parent {
+
+	public Object m1() {
+
+		System.out.println("Parent class m1 method");
+
+		return null;
+	}
+
+}
+
+
+package covarientReturnType;
+
+public class Child extends Parent {
+
+	public Byte m1() {
+
+		System.out.println("Child class m1 method");
+
+		return null;
+	}
+
+	public static void main(String[] args) {
+
+		Child c = new Child();
+		c.m1();
+	}
+}
+
+
+Example 5: 
+
+
+package covarientReturnType;
+
+public class Parent {
+
+	public Object m1() {
+
+		System.out.println("Parent class m1 method");
+
+		return null;
+	}
+
+}
+
+
+
+package covarientReturnType;
+
+public class Child extends Parent {
+
+	public Short m1() {
+
+		System.out.println("Child class m1 method");
+
+		return null;
+	}
+
+	public static void main(String[] args) {
+
+		Child c = new Child();
+		c.m1();
+	}
+}
+
+Example 6:
+
+
+package covarientReturnType;
+
+public class Parent {
+
+	public String m1() {
+
+		System.out.println("Parent class m1 method");
+
+		return null;
+	}
+
+}
+
+
+
+package covarientReturnType;
+
+public class Child extends Parent {
+
+	public String m1() {
+
+		System.out.println("Child class m1 method");
+
+		return null;
+	}
+
+	public static void main(String[] args) {
+
+		Child c = new Child();
+		c.m1();
+	}
+}

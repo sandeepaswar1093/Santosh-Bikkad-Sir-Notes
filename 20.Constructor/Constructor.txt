@@ -1,0 +1,83 @@
+Constructor:  Constructor is used to initialize object.
+              Constructor name is same as class name.
+              Every java class has constructor.
+              Constructor dont have return type.
+              A Constructor is called automatically at the time of object creation.
+
+Syntax: AccessModifier ClassName(){
+                   
+                                  }
+
+Example 1:
+
+package constructorTypes;
+
+public class Person {
+
+	int pid;
+	String pname;
+	
+	
+	public void display() {
+		System.out.println(pid +" "+ pname);
+	}
+	
+	public static void main(String[] args) {
+		
+		Person p=new Person();
+		p.display();
+	}
+}
+
+
+Exapmle 2:
+
+package constructorTypes;
+
+public class Person {
+
+	int pid;
+	String pname;
+	
+	public Person() {
+		pid=0;
+		pname=null;
+	}
+	
+	public void display() {
+		System.out.println(pid +" "+ pname);
+	}
+	
+	public static void main(String[] args) {
+		
+		Person p=new Person();
+		p.display();
+	}
+}
+
+Example 3:   
+
+
+package constructorTypes;
+
+public class Person {
+
+	int pid;
+	String pname;
+	
+	public Person() {
+		pid=11;
+		pname="Santosh";
+	}
+	
+	public void display() {
+		System.out.println(pid +" "+ pname);
+	}
+	
+	public static void main(String[] args) {
+		
+		Person p=new Person();
+		p.display();
+	}
+}
+

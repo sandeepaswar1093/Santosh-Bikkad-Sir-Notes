@@ -1,0 +1,77 @@
+Example :
+
+package stringMethods;
+
+public class StringDemo {
+
+	public static void main(String[] args) {
+
+		String s1 = "Santosh";
+		System.out.println(s1);
+
+		// charAt()
+
+		System.out.println(s1.charAt(3));
+		System.out.println(s1.charAt(5));
+		// System.out.println(s1.charAt(10));
+
+		// concat()
+
+		String s2 = s1.concat("Bikkad");
+		System.out.println(s2);
+
+		String s11="Santosh";
+		String s22="Santosh";
+		System.out.println(s11.equals(s22));
+		System.out.println(s11==s22);
+		
+		
+		String s111="santosh";
+		String s222="SANTOSH";
+		System.out.println(s111.equals(s222));
+		System.out.println(s111==s222);
+		System.out.println(s111.equalsIgnoreCase(s222));
+		
+		String s1111="SantoshBikkad";
+		    System.out.println(s1111.length());
+		
+		    
+		    String s2222="SantoshBikkad";
+		     System.out.println(s2222.substring(7));
+		     System.out.println(s2222.substring(7, 11));
+		     System.out.println(s2222.substring(0, 7)); 
+		     
+		     
+		     String s3="Saatosh";
+		     System.out.println(s3.replace('a', 's'));
+		    
+		     
+		     
+		     String s33="bikkad";
+		     System.out.println(s33.toUpperCase());
+		     System.out.println(s33.toLowerCase());
+		     
+		     String s333="Bikkad";
+		     System.out.println(s333.indexOf('k'));
+		     System.out.println(s333.lastIndexOf('k'));
+		     
+		    
+		     String s3333="   BikkadIt   ";
+		     System.out.println(s3333);
+		     System.out.println(s3333.trim());
+		     
+		     
+		     
+		     
+	}
+
+}
+
+
+
+
+referace for additional method :
+
+
+
+https://www.w3schools.com/java/java_ref_string.asp

@@ -1,0 +1,171 @@
+package com.bikkadIT.BankApplication.controller;
+
+import java.util.Scanner;
+
+import com.bikkadIT.BankApplication.service.BankServiceImpl;
+
+public class Admin {
+
+	public static void main(String[] args) {
+
+		BankServiceImpl bankServiceImpl = new BankServiceImpl();
+		
+		System.out.println("----------WELCOME TO BANK---------");
+   while (true) {
+		System.out.println("Press 1 for create account");
+		System.out.println("Press 2 for view account");
+		System.out.println("Press 3 for withdraw Money");
+		System.out.println("Press 4 for deposit account");
+		System.out.println("Press 5 for update  account");
+		System.out.println("Press 6 for EXIT");
+
+		Scanner sc = new Scanner(System.in);
+		int ch = sc.nextInt();
+
+		switch (ch) {
+
+		case 1:
+			
+			     bankServiceImpl.addAccount();
+			break;
+		case 2: 
+			bankServiceImpl.viewAccount();
+			break;
+		default:
+			break;
+
+		}
+	}
+	}
+}
+
+
+
+
+package com.bikkadIT.BankApplication.model;
+
+public class Account {
+
+	private int accno;
+	
+	private String name;
+	
+	private String address;
+	
+	private String panno;
+	
+	private double balance;
+
+	public int getAccno() {
+		return accno;
+	}
+
+	public void setAccno(int accno) {
+		this.accno = accno;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getPanno() {
+		return panno;
+	}
+
+	public void setPanno(String panno) {
+		this.panno = panno;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+
+	@Override
+	public String toString() {
+		return "Account [accno=" + accno + ", name=" + name + ", address=" + address + ", panno=" + panno + ", balance="
+				+ balance + "]";
+	}
+}
+
+
+
+package com.bikkadIT.BankApplication.service;
+
+public interface BankServiceI {
+
+	public abstract void addAccount();
+	
+	public abstract void viewAccount();
+}
+
+
+
+package com.bikkadIT.BankApplication.service;
+
+import java.util.Scanner;
+
+import com.bikkadIT.BankApplication.model.Account;
+
+public class BankServiceImpl implements BankServiceI {
+
+	Account ac = new Account();
+	Scanner sc = new Scanner(System.in);
+
+	@Override
+	public void addAccount() {
+
+		System.out.println("Enter you account no");
+		ac.setAccno(sc.nextInt());
+
+		System.out.println("Enter your name");
+		String name = sc.next();
+		ac.setName(name);
+
+		System.out.println("Enter your address");
+		String address = sc.next();
+		ac.setAddress(address);
+
+		System.out.println("Enter your pan no");
+		String panno = sc.next();
+		ac.setPanno(panno);
+
+		System.out.println("Enter amount you want deposit");
+		double bal = sc.nextDouble();
+		ac.setBalance(bal);
+
+		System.out.println("Your account created successfully");
+	}
+
+	@Override
+	public void viewAccount() {
+		System.out.println("Enter account number");
+		int useraccountno=sc.nextInt();
+		if(ac.getAccno() == useraccountno) {
+			System.out.println(ac.getAccno());
+			System.out.println(ac.getName());
+			System.out.println(ac.getAddress());
+			System.out.println(ac.getPanno());
+			System.out.println(ac.getBalance());
+		
+		}else {
+			System.out.println("create ACCOUNT FIRST");
+		}
+	}
+
+}

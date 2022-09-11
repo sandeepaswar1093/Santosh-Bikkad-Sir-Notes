@@ -1,0 +1,96 @@
+Control Statements:
+
+1)Decision Making Statements(Selection Statements)
+  1)if Statement
+  2)If else Statement
+  3)if else ladder
+  4)nested if 
+  5)Switch Statement
+  
+
+1)Looping Statements(Iterative Statements)
+
+1)while loop
+2)Do while
+3)for loop
+4)foreach loop(added in 1.5 version of java)
+
+
+1)Decision Making Statements(Selection Statements)
+  
+1)if Statement :It is used when we want test condition.
+
+syntax: if(condition){
+          -------------
+          -------------
+           }
+
+Example :
+
+public class IfDemo {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter your age");
+		int age;
+		age=sc.nextInt();
+		
+		if(age >= 18) {
+			System.out.println("You are eligible for voting");
+		    System.out.println("You can vote");
+		}
+		System.out.println("Thank you");
+		System.out.println("Good Night");
+	}
+}
+
+
+2) If else Statement:
+It is used to execute two statements either if or else statement for single condition.
+
+syntax: if(condition){
+        -----------
+        -----------
+          }else{
+        -----------
+        -------------         
+         }
+
+Example :
+
+import java.util.Scanner;
+
+public class IFElseDemo {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter any number");
+		int num;
+		num = sc.nextInt();
+
+		if (num >= 0) {
+			System.out.println("Positive Numbers");
+		} else {
+			System.out.println("Negative Number");
+		}
+
+		System.out.println("Thank you");
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,173 @@
+
+Vector:
+ The Underlying Data Structure is Resizable Array OR Growable Array.
+ Insertion Order is Preserved.
+ Duplicate Objects are allowed.
+ Heterogeneous Objects are allowed.
+ null Insertion is Possible.
+ Implements Serializable, Cloneable and RandomAccess interfaces.
+ Every Method Present Inside Vector is Synchronized and Hence Vector Object is
+Thread Safe.
+ Vector is the Best Choice if Our Frequent Operation is Retrieval.
+ Worst Choice if Our Frequent Operation is Insertion OR Deletion in the Middle.
+
+Constructors:
+1) Vector v = new Vector();
+ Creates an Empty Vector Object with Default Initial Capacity 10.
+ Once Vector Reaches its Max Capacity then a New Vector Object will be Created with
+
+New Capacity = Current Capacity * 2
+
+2) Vector v = new Vector(intinitialCapacity);
+
+3) Vector v = new Vector(intinitialCapacity, intincrementalCapacity);
+
+4) Vector v = new Vector(Collection c);
+
+
+Example:
+
+package linkedlist;
+
+import java.util.LinkedList;
+import java.util.Vector;
+
+public class LinkedListDemo {
+public static void main(String[] args) {
+		
+		Vector v=new Vector();
+		System.out.println(v.capacity());
+		System.out.println(v.size());
+		
+		Vector v1=new Vector(25);
+		System.out.println(v1.capacity());
+		System.out.println(v1.size());
+		
+		v.addElement("Santosh");
+		v.addElement("IT");
+		v.addElement("Santosh");
+		v.addElement("Santosh");
+		v.addElement("Santosh");
+		v.addElement("Bikkad");
+		v.addElement("Santosh");
+		v.addElement(1);
+		v.addElement("Santosh");
+		v.addElement(2);
+		v.addElement(2);
+		System.out.println(v.capacity());
+		System.out.println(v.size());
+	
+		Vector v2=new Vector(10,5);
+		v2.addElement("Santosh");
+		v2.addElement("IT");
+		v2.addElement("Santosh");
+		v2.addElement("Santosh");
+		v2.addElement("Santosh");
+		v2.addElement("Bikkad");
+		v2.addElement("Santosh");
+		v2.addElement(1);
+		v2.addElement("Santosh");
+		v2.addElement(2);
+		v2.addElement(2);
+		System.out.println(v2.capacity());
+		System.out.println(v2.size());
+	
+}
+}
+
+
+Methods:
+1) To Add Elements:
+ add(Object o) ->Collection
+ add(int index, Object o) ->List
+ addElement(Object o) ->Vector
+
+2) To Remove Elements:
+ remove(Object o) Collection
+ removeElement(Object o)Vector
+ remove(int index) List
+ removeElementAt(int index)Vector
+ clear() Collection
+ removeAllElements()Vector
+
+3) To Retrive Elements:
+ Object get(int index)List
+ Object elementAt(int index)Vector
+ Object firstElement() Vector
+ Object lastElement()Vector
+
+4) Some Other Methods:
+ int size()
+ int capacity()
+ Enumeration element()
+
+Example:
+
+
+importjava.util.Vector;
+classVectorDemo {
+public static void main(String[] args) {
+Vector v = new Vector();
+System.out.println(v.capacity()); //10
+for(int i = 1; i<=10; i++) {
+v.addElement(i);
+}
+System.out.println(v.capacity()); //10
+v.addElement("A");
+System.out.println(v.capacity()); //20
+System.out.println(v); //[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, A]
+}
+}
+
+
+
+
+Differences between ArrayList and Vector:
+========================================
+
+ArrayList                                                          Vector
+Every Method Present Inside ArrayListis
+Non – Synchronized.
+                                                                 Every Method Present in Vector is
+                                                                 Synchronized.
+At a Time Multiple Threads are allow to
+Operate on ArrayList Simultaneously
+and Hence ArrayList Object is Not
+Thread Safe.
+                                                                   At a Time Only One Thread is allow to
+                                                                    Operate on Vector Object and Hence
+                                                                   Vector Object is Always Thread Safe.
+Relatively Performance is High because
+Threads are Not required to Wait.
+                                                                   Performance is Low because
+                                                                   Threads are required to Wait.
+Introduced in 1.2 Version and it is Non –
+Legacy.
+                                                                Introduced in 1.0 Version and it is   
+                                                                                          Legacy.
+
+
+How to get Synchronized Version of ArrayList Object?
+===================================================
+By Default ArrayList Object is Non- Synchronized but we can get Synchronized Version
+ArrayList Object by using the following Method of Collections Class.
+
+public static List synchronizedList(List l)
+ArrayListal = new ArrayList ();
+List l = Collections.synchronizedList(al);
+
+Synchronized                      Non - Synchronized
+                                   Version
+Version
+ 
+
+Similarly we can get Synchronized Version of Set and Map Objects by using the following
+Methods of Collection Class.
+
+public static Set synchronizedSet(Set s)
+public static Map synchronizedMap(Map m)
+
+
+
+                        
+

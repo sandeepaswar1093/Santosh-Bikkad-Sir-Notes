@@ -1,0 +1,205 @@
+1) Collection Interface:
+======================
+If we want to Represent a Group of Individual Objects as a Single Entity then we
+should go for Collection Interface.
+
+Methods:
+ Collection Interface defines the Most Common Methods which are Applicable for any
+Collection Objects.
+ The following is the List of the Methods Present Inside Collection Interface.
+
+1) boolean add(Object o)
+2) boolean addAll(Collection c)
+
+Example :
+
+package demo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CollectionDemo {
+
+	public static void main(String[] args) {
+	
+		
+		            // creating object of List<String>
+		            List<String> arrlist = new ArrayList<String>();
+		  
+		            // Adding element to arrlist
+		            arrlist.add("A");
+		            arrlist.add("B");
+		            arrlist.add("C");
+		            arrlist.add("Tajmahal");
+		  
+		            // printing the arrlist before operation
+		            System.out.println("arrlist before operation : " + arrlist);
+		  
+		            ArrayList al=new ArrayList();
+		            al.add("1");
+		            al.add("2");
+		            al.add("3");
+		            
+		            arrlist.addAll(al);
+		            System.out.println("arrlist after operation : " + arrlist);
+		        }	
+	}
+
+
+
+
+3) boolean remove(Object o)
+
+4) boolean removeAll(Collection c)
+
+Example :
+
+package demo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CollectionDemo {
+
+	public static void main(String[] args) {
+	
+		
+		            // creating object of List<String>
+		            List<String> arrlist = new ArrayList<String>();
+		  
+		            // Adding element to arrlist
+		            arrlist.add("A");
+		            arrlist.add("B");
+		            arrlist.add("C");
+		            arrlist.add("Tajmahal");
+		  
+		            // printing the arrlist before operation
+		            System.out.println("arrlist before operation : " + arrlist);
+		  
+		            ArrayList al=new ArrayList();
+		            al.add("1");
+		            al.add("2");
+		            al.add("3");
+		            
+		            arrlist.addAll(al);
+		            System.out.println("arrlist after operation : " + arrlist);
+		            
+		            arrlist.removeAll(al);
+		            
+		            System.out.println("ArrayList after remove"+ arrlist);
+		        }
+		  
+		  	}
+
+
+
+
+
+6) void clear():
+
+package demo;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
+
+public class CollectionDemo {
+
+	
+	
+	
+	public static void main(String[] args) {
+	
+		  // creating an empty LinkedList
+        Collection<String> list = new LinkedList<String>();
+  
+        // use add() method to add elements in the list
+        list.add("Geeks");
+        list.add("for");
+        list.add("Geeks");
+  
+        // Output the present list
+        System.out.println("The list is: " + list);
+  
+        // Clearing the LinkedList
+        list.clear();
+  
+        // printing the new list
+        System.out.println("The new List is: " + list);
+    }
+		  
+}
+
+7) boolean contains(Object o)
+
+package demo;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
+
+public class CollectionDemo {
+
+	public static void main(String[] args) {
+	
+		 // creating an empty LinkedList
+        Collection<String> list = new LinkedList<String>();
+  
+        // use add() method to add elements in the list
+        list.add("Geeks");
+        list.add("for");
+        list.add("Geeks");
+  
+        // Output the present list
+        System.out.println("The list is: " + list);
+  
+        // Checking the presence of Geeks
+        // using contains() method
+        boolean result = list.contains("Geeks");
+  
+        // printing the result
+        System.out.println("Is Geeks present in the List: "
+                           + result);
+    }
+    }
+		  
+		       
+8) boolean containsAll(Collection c)
+
+
+package demo;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
+public class CollectionDemo {
+
+	public static void main(String[] args) {
+              // Creating an empty list
+		List<String> list = new ArrayList<String>();
+
+		// Use add() method to add elements
+		// into the List
+		list.add("Geeks");
+		list.add("Welcome");
+		list.add("To");
+		
+		list.add("4");
+		list.add("Geeks");
+
+		// Displaying the List
+		System.out.println("List: " + list);
+
+		// Creating another empty List
+		List<String> listTemp = new ArrayList<String>();
+
+		listTemp.add("Geeks");
+		listTemp.add("4");
+		listTemp.add("Geeks");
+
+		System.out.println("Are all the contents equal? " + list.containsAll(listTemp));
+	}
+}

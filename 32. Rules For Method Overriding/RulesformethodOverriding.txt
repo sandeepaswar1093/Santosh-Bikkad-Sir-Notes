@@ -1,0 +1,383 @@
+Rules for access modifier While method overriding:
+
+private<default<protected<public .
+
+while method overrding we cant reduce scope of access modifier but we can increse scope of access modifier.
+
+Example 1:
+
+package covarientReturnType;
+
+public class Parent {
+
+	public  String m1() {
+
+		System.out.println("Parent class m1 method");
+
+		return null;
+	}
+
+}
+
+
+
+package covarientReturnType;
+
+public class Child extends Parent {
+
+	public String m1() {
+
+		System.out.println("Child class m1 method");
+
+		return null;
+	}
+
+	public static void main(String[] args) {
+
+		Child c = new Child();
+		c.m1();
+	}
+}
+
+
+Exam[ple 2:
+
+
+package covarientReturnType;
+
+public class Parent {
+
+	protected  String m1() {
+
+		System.out.println("Parent class m1 method");
+
+		return null;
+	}
+
+}
+
+
+package covarientReturnType;
+
+public class Child extends Parent {
+
+	protected String m1() {
+
+		System.out.println("Child class m1 method");
+
+		return null;
+	}
+
+	public static void main(String[] args) {
+
+		Child c = new Child();
+		c.m1();
+	}
+}
+
+
+Example 3:
+
+
+package covarientReturnType;
+
+public class Parent {
+
+	protected  String m1() {
+
+		System.out.println("Parent class m1 method");
+
+		return null;
+	}
+
+}
+
+
+package covarientReturnType;
+
+public class Child extends Parent {
+
+	public String m1() {
+
+		System.out.println("Child class m1 method");
+
+		return null;
+	}
+
+	public static void main(String[] args) {
+
+		Child c = new Child();
+		c.m1();
+	}
+}
+
+
+Example 4:
+
+
+package covarientReturnType;
+
+public class Parent {
+
+	  String m1() {
+
+		System.out.println("Parent class m1 method");
+
+		return null;
+	}
+
+}
+
+
+
+package covarientReturnType;
+
+public class Child extends Parent {
+
+	 String m1() {
+
+		System.out.println("Child class m1 method");
+
+		return null;
+	}
+
+	public static void main(String[] args) {
+
+		Child c = new Child();
+		c.m1();
+	}
+}
+
+
+Example 5:
+
+
+package covarientReturnType;
+
+public class Parent {
+
+	  String m1() {
+
+		System.out.println("Parent class m1 method");
+
+		return null;
+	}
+
+}
+
+
+package covarientReturnType;
+
+public class Child extends Parent {
+
+	protected String m1() {
+
+		System.out.println("Child class m1 method");
+
+		return null;
+	}
+
+	public static void main(String[] args) {
+
+		Child c = new Child();
+		c.m1();
+	}
+}
+
+Example 6:
+
+
+package covarientReturnType;
+
+public class Parent {
+
+	  String m1() {
+
+		System.out.println("Parent class m1 method");
+
+		return null;
+	}
+
+}
+
+
+package covarientReturnType;
+
+public class Child extends Parent {
+
+	public String m1() {
+
+		System.out.println("Child class m1 method");
+
+		return null;
+	}
+
+	public static void main(String[] args) {
+
+		Child c = new Child();
+		c.m1();
+	}
+}
+
+
+
+Example 7:
+
+
+package covarientReturnType;
+
+public class Parent {
+
+	private   String m1() {
+
+		System.out.println("Parent class m1 method");
+
+		return null;
+	}
+	
+	public static void main(String[] args) {
+		Parent p=new Parent();
+		p.m1();
+		
+		
+	}
+
+}
+
+
+
+package covarientReturnType;
+
+public class Child extends Parent {
+
+	private  String m1() {
+
+		System.out.println("Child class m1 method");
+
+		return null;
+	}
+
+	public static void main(String[] args) {
+
+		Child c = new Child();
+		c.m1();
+	}
+}
+
+
+
+
+Example 4.private method we cant override.Base on our requirment we can define exactly same 
+private method in child class it is valid but its not overriding.
+
+Example 4
+
+package overridingRules;
+public class Parent {
+    private Object m1() {
+		System.out.println("parent class method");
+		return new Object();
+		}
+}
+package overridingRules;
+public class Child extends Parent{
+private Object m1() {
+	System.out.println("child class method");
+		return null;
+	}
+	public static void main(String[] args) {
+		
+		Child c=new Child();
+		c.m1();
+	}
+}
+
+
+3)Overriding with static method:we cant override static method. 
+
+Example1 
+package overridingRules;
+
+public class Parent {
+      public static Object m1() {
+		System.out.println("parent class method");
+		return new Object();
+		}
+	
+}
+
+package overridingRules;
+public class Child extends Parent{
+     public  Object m1() {// we cant override
+	System.out.println("child class method");
+		return null;
+	}
+	public static void main(String[] args) {
+		
+		Child c=new Child();
+		c.m1();
+	}
+}
+
+Example 2
+package overridingRules;
+public class Parent {
+     public  Object m1() { // we cant override
+		System.out.println("parent class method");
+		return new Object();
+		}	
+}
+package overridingRules;
+public class Child extends Parent{
+     public static Object m1() {
+	System.out.println("child class method");
+		return null;
+	}
+	public static void main(String[] args) {
+		
+		Child c=new Child();
+		c.m1();
+	}
+}
+
+Example 3. if both parent and choild class metrhods are static then we wont get any complile time 
+error but it is not oveerriding.
+
+package overridingRules;
+
+public class Parent {
+    public static Object m1() { 
+		System.out.println("parent class method");
+		return new Object();
+		}
+	
+}
+package overridingRules;
+public class Child extends Parent{
+   public static Object m1() {
+	System.out.println("child class method");
+		return null;
+	}
+	public static void main(String[] args) {
+		
+		Child c=new Child();
+		c.m1();
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

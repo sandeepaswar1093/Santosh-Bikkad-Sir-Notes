@@ -1,0 +1,101 @@
+Example 1 :
+
+package com.bikkadIt;
+
+public class MethodDemo {
+
+	public void add() {
+		int a=10;
+		int b=20;
+		int c=a+b;
+		System.out.println("Addition of a and b="+ c);
+	}
+	public static void main(String[] args) {
+		
+		MethodDemo m=new MethodDemo();
+		m.add();
+	}
+}
+
+
+Example 2:
+
+package com.bikkadIt;
+
+public class MethodDemo {
+
+	public static void add() {
+		int a=10;
+		int b=20;
+		int c=a+b;
+		System.out.println("Addition of a and b="+ c);
+	}
+	public static void main(String[] args) {
+		MethodDemo.add();
+		
+	}
+}
+
+
+
+Example: 
+
+
+package com.bikkadIt;
+
+public class MethodDemo {
+
+	public  int add(int a,int b) {
+		
+		int c=a+b;
+		return c;
+	}
+	public static void main(String[] args) {
+		
+		MethodDemo m=new MethodDemo();
+		int result=m.add(10, 20);
+		System.out.println("Addition :"+ result);
+	}
+}
+
+
+Example:
+
+package com.bikkadIt;
+
+public class MethodDemo {
+
+	public void add(int a,int b) {
+		
+		int c=a+b;
+		System.out.println("Addition :"+c);
+	}
+	public static void main(String[] args) {
+		
+		MethodDemo m=new MethodDemo();
+		m.add(10, 20);
+		
+	}
+}
+
+
+Example :
+
+package com.bikkadIt;
+
+public class MethodDemo {
+
+	public int add() {
+		int a=10;
+		int b=20;
+		int c=a+b;
+		return c;
+	}
+	public static void main(String[] args) {
+		
+		MethodDemo m=new MethodDemo();
+		int result =m.add();
+		System.out.println("Addition :"+ result);
+		
+	}
+}

@@ -1,0 +1,126 @@
+As part of 1.7 version enhancements in Exception Handling the following 2 concepts
+introduced 
+
+1. try with resources
+2. multi catch block
+
+1.try with resources
+Untill 1.6 version it is highly recommended to write finally block to close all resources
+which are open as part of try block. 
+
+problems in this approach :
+Compulsory programmer is required to close all opened resources which will increases
+the complexity of the programming.
+Compulsory we should write finally block explicitly which increases length of the
+code and reduce readability.
+To overcome these problems Sun People introduced "try with resources" in 1.7
+version.
+
+The main advantage of "try with resources" is:
+
+The resources which are opened as part of try block will be closed automatically
+Once the control reaches end of the try block either normally or abnormally and hence
+we are not required to close explicitly so that the complexity of programming will be
+reduced.It is not required to write finally block explicitly and hence length of the code
+will be reduced and readability will be improved.
+
+Example:
+package exceptionenhncemnt7;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class TryWithresources {
+public static void main(String[] args) throws IOException {
+	
+
+	/*
+	 * FileReader fr=new
+	 * FileReader("C:\\Users\\BR011TX\\Desktop\\Bikkad IT 01\\13-07-2021\\File.txt"
+	 * ); BufferedReader br=new BufferedReader(fr); try { String line=br.readLine();
+	 * while(line!=null) { System.out.println(line); line=br.readLine(); }}finally {
+	 * br.close(); }
+	 */
+	    
+	FileReader fr=new FileReader("C:\\Users\\BR011TX\\Desktop\\Bikkad IT 01\\13-07-2021\\File.txt");
+	   
+	    try (BufferedReader br=new BufferedReader(fr);){
+	      String line=br.readLine();
+	      while(line!=null) {
+	    	  System.out.println(line);
+	    	  line=br.readLine();
+	    	 }
+}
+}}
+
+
+
+
+
+
+
+
+1. We can declare any no of resources but all these resources should be seperated with
+;(semicolon)
+try(R1 ; R2 ; R3)
+{
+ -------------
+ -------------
+}
+2. All resources should be AutoCloseable resources. A resource is said to be auto
+closable if and only if the corresponding class implements the java.lang.AutoCloseable
+interface either directly or indirectly.
+ All database related, network related and file io related resources already
+implemented AutoCloseable interface. Being a programmer we should aware and we
+are not required to do anything extra.
+
+
+4.Untill 1.6 version try should be followed by either catch or finally but 1.7 version we
+can take only try with resource without catch or finally
+try(R)
+{ 
+}
+
+2) Multicatch Block:
+
+
+Until 1.6 version ,Eventhough Multiple Exceptions having same handling code we have
+to write a separate catch block for every exceptions, it increases length of the code and
+reduces readability.
+
+try{
+ -----------------
+ -----------------
+}
+catch(ArithmeticException e) {
+ e.printStackTrace();
+}
+catch(NullPointerException e) {
+ e.printStackTrace();
+}
+
+To overcome this problem Sun People introduced "Multi catch block" concept in 1.7
+version. 
+
+Example: 
+
+
+public class TryWithMultiCatch {
+public static void main(String[] args) {
+	
+	try {
+		
+	}catch(ArithmeticException | NullPointerException n) {
+		
+	
+		
+	}
+	
+	
+}
+}
+
+
+

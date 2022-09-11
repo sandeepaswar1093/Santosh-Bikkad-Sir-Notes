@@ -1,0 +1,11 @@
+Thread LifeCycle Stages:
+
+1)New State(Born state)
+
+2)Runnable State(Ready state)
+
+3)Running State (Execution)
+
+4)Waiting state (Blocked State)
+
+5)Dead state (Exit)

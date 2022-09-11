@@ -1,0 +1,212 @@
+Collection :COllection is group of individual object as Single entity.
+
+Collection(Interface) Methods :
+
+1)add()
+2)addAll()
+3)remove()
+4)removeAll()
+5)retainAll()
+6)clear()
+7)conatins()
+8)containsAll()
+
+
+1)List(I) interface:
+
+->It maintains insertion Order.
+->It allows duplicate Objects.
+
+
+Example :
+
+
+package listInterface;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListDemo {
+
+	public static void main(String[] args) {
+		
+		List l=new ArrayList();
+		l.add(10);
+		l.add(20);
+		l.add(40);
+		l.add(50);
+		l.add(20);
+		System.out.println(l);
+	}
+}
+
+
+Example 2:
+
+package listInterface;
+
+public class Student {
+
+	private int sid;
+	private String sname;
+	private String saddress;
+	public int getSid() {
+		return sid;
+	}
+	public void setSid(int sid) {
+		this.sid = sid;
+	}
+	public String getSname() {
+		return sname;
+	}
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+	public String getSaddress() {
+		return saddress;
+	}
+	public void setSaddress(String saddress) {
+		this.saddress = saddress;
+	}
+	@Override
+	public String toString() {
+		return "Stduent [sid=" + sid + ", sname=" + sname + ", saddress=" + saddress + "]";
+	}
+	public Student(int sid, String sname, String saddress) {
+		super();
+		this.sid = sid;
+		this.sname = sname;
+		this.saddress = saddress;
+	}
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+}
+
+
+package listInterface;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Student s1=new Student();
+		 s1.setSid(111);
+		 s1.setSname("Santosh");
+		 s1.setSaddress("Bahula");
+		 
+		 Student s2=new Student(222,"Bikkad","Pune");
+		 
+		 Student s3=new Student(222,"Bikkad","Pune");
+		 
+		 List l=new ArrayList();
+		 l.add(s1);
+		 l.add(s2);
+		 l.add(s3);
+		 System.out.println(l);
+		 
+		 
+		 
+	}
+}
+
+
+
+
+2)Set(I)  interface:
+
+->It doesnt maintain insertion order.
+->It doesnt allow duplicate Objects.
+
+Example :
+
+package setInterface;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class SetDemo {
+
+	public static void main(String[] args) {
+		
+		Set s=new HashSet();
+		s.add(10);
+		s.add(20);
+		s.add(30);
+		s.add(20);
+		s.add(10);
+		System.out.println(s);
+	}
+}
+
+
+Example :
+
+
+package setInterfacetype;
+
+public class Employee {
+
+	private int eid;
+	private String ename;
+	public int getEid() {
+		return eid;
+	}
+	public void setEid(int eid) {
+		this.eid = eid;
+	}
+	public String getEname() {
+		return ename;
+	}
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+	@Override
+	public String toString() {
+		return "Employee [eid=" + eid + ", ename=" + ename + "]";
+	}
+	
+}
+
+
+
+
+package setInterfacetype;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class SetDemoooo {
+
+	public static void main(String[] args) {
+		
+		Employee e1=new Employee();
+		e1.setEid(111);
+		e1.setEname("Santosh");
+		
+		Employee e2=new Employee();
+		e2.setEid(333);
+		e2.setEname("Bikkad");
+		
+		Employee e3=new Employee();
+		e3.setEid(444);
+		e3.setEname("ganesh");
+		
+		Set s=new HashSet();
+		s.add(e1);
+		s.add(e1);
+		s.add(e2);
+		s.add(e2);
+		s.add(e3);
+		s.add(e3);
+		
+		System.out.println(s);
+		
+	}
+}
+

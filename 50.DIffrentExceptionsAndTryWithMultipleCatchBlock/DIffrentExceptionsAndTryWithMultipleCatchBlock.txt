@@ -1,0 +1,447 @@
+1)Number Format Exception:
+
+Example 1:
+
+package diffrentExceptions;
+
+public class NumberFormatExceptionDemo {
+
+	public static void main(String[] args) {
+
+		String s = "123";
+		System.out.println(s);
+		Integer i = Integer.parseInt(s);
+		System.out.println(i);
+	}
+
+}
+
+Example 2:
+
+package diffrentExceptions;
+
+public class NumberFormatExceptionDemo {
+
+	public static void main(String[] args) {
+
+		String s = "123Bikkad";
+		System.out.println(s);
+		try {
+		Integer i = Integer.parseInt(s);
+		System.out.println(i);
+		}
+		catch(NumberFormatException n) {
+			System.out.println(n.getMessage());
+		}
+	}
+
+}
+
+
+ArrayIndexOutOfBondException:
+
+Example 1:
+
+package diffrentExceptions;
+
+public class ArrayIndexOutOfBondExceptionDemo {
+
+	public static void main(String[] args) {
+
+		int arr[] = new int[2];
+		arr[0] = 1;
+		arr[1] = 2;
+		System.out.println(arr[0]);
+		System.out.println(arr[1]);
+
+	}
+}
+
+package diffrentExceptions;
+
+public class ArrayIndexOutOfBondExceptionDemo {
+
+	public static void main(String[] args) {
+
+		int arr[] = new int[2];
+		arr[0] = 1;
+		arr[1] = 2;
+		System.out.println(arr[0]);
+		System.out.println(arr[1]);
+		try {
+		System.out.println(arr[2]);
+		}
+		catch(ArrayIndexOutOfBoundsException a) {
+			System.out.println(a.getMessage());
+		}	
+
+	}
+}
+
+
+3)StringIndexOutOfBondException :
+
+package diffrentExceptions;
+
+public class StringIndexOutOfBondExceptionDemo {
+
+	public static void main(String[] args) {
+		
+		String s="Santosh";
+		System.out.println(s.charAt(3));
+		
+	}
+	
+}
+
+
+Example 2:
+
+
+package diffrentExceptions;
+
+public class StringIndexOutOfBondExceptionDemo {
+
+	public static void main(String[] args) {
+		
+		String s="Santosh";
+		try {
+		System.out.println(s.charAt(8));
+		}
+		catch(StringIndexOutOfBoundsException si) {
+			System.out.println(si.getMessage());
+		}
+	}
+	
+}
+
+
+
+TryWithMultiple Catch Block:
+
+syntax:
+
+try{
+
+}catch(){
+
+}catch(){
+
+}
+
+Example 1:
+
+
+
+package tryWithMultipleCatchBlock;
+
+public class MulticatchBlockDemo {
+
+	public static void main(String[] args) {
+		try {
+		int a=10;
+		int b=0;
+		int c=a/b;
+		System.out.println(c);
+		
+		String s=null;
+		System.out.println(s.length());
+		
+		String s1="Santosh";
+		Integer i=Integer.parseInt(s1);
+		System.out.println(i);
+		
+		
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	
+}
+
+
+
+Example 2:
+
+
+package tryWithMultipleCatchBlock;
+
+public class MulticatchBlockDemo {
+
+	public static void main(String[] args) {
+		try {
+			int a = 10;
+			int b = 0;
+			int c = a / b;
+			System.out.println(c);
+
+			String s = null;
+			System.out.println(s.length());
+
+			String s1 = "Santosh";
+			Integer i = Integer.parseInt(s1);
+			System.out.println(i);
+
+		} catch (ArithmeticException e) {
+			System.out.println(e.getMessage());
+		} catch (NullPointerException n) {
+			System.out.println(n.getMessage());
+		} catch (NumberFormatException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+}
+
+
+
+Example 3:
+
+
+package tryWithMultipleCatchBlock;
+
+public class MulticatchBlockDemo {
+
+	public static void main(String[] args) {
+		try {
+		int a=10;
+		int b=2;
+		int c=a/b;
+		System.out.println(c);
+		
+		String s=null;
+		System.out.println(s.length());
+		
+		String s1="Santosh";
+		Integer i=Integer.parseInt(s1);
+		System.out.println(i);
+		
+		
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	
+}
+
+
+Example 4:
+
+
+package tryWithMultipleCatchBlock;
+
+public class MulticatchBlockDemo {
+
+	public static void main(String[] args) {
+		try {
+		int a=10;
+		int b=0;
+		int c=a/b;
+		System.out.println(c);
+		
+		String s="Santosh";
+		System.out.println(s.length());
+		
+		String s1="123";
+		Integer i=Integer.parseInt(s1);
+		System.out.println(i);
+		}
+		catch(NullPointerException e) {
+			System.out.println(e.getMessage());
+		}
+		catch(ArithmeticException e) {
+			System.out.println(e.getMessage());
+			System.out.println("Arithmetic Exception");
+		}
+		
+		catch(NumberFormatException e) {
+			System.out.println(e.getMessage());
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	
+}
+
+
+
+
+
+Example 5:
+
+
+package tryWithMultipleCatchBlock;
+
+public class MulticatchBlockDemo {
+
+	public static void main(String[] args) {
+		try {
+		int a=10;
+		int b=2;
+		int c=a/b;
+		System.out.println(c);
+		
+		String s="Santosh";
+		System.out.println(s.length());
+		
+		String s1="123";
+		Integer i=Integer.parseInt(s1);
+		System.out.println(i);
+		
+		
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	
+}
+
+
+Example 6:
+
+package tryWithMultipleCatchBlock;
+
+public class MulticatchBlockDemo {
+
+	public static void main(String[] args) {
+		try {
+		int a=10;
+		int b=2;
+		int c=a/b;
+		System.out.println(c);
+		
+		String s="Santosh";
+		System.out.println(s.length());
+		
+		String s1="Santosh";
+		Integer i=Integer.parseInt(s1);
+		System.out.println(i);
+		
+		
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	
+}
+
+
+
+
+Exammple 7:
+
+
+package tryWithMultipleCatchBlock;
+
+public class MulticatchBlockDemo {
+
+	public static void main(String[] args) {
+		try {
+		int a=10;
+		int b=2;
+		int c=a/b;
+		System.out.println(c);
+		
+		String s=null;
+		System.out.println(s.length());
+		
+		String s1="123";
+		Integer i=Integer.parseInt(s1);
+		System.out.println(i);
+		}
+		catch(NullPointerException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		catch(NumberFormatException e) {
+			System.out.println(e.getMessage());
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	
+}
+
+
+
+
+Example 8 :While working with multicatch Block the super class exception must be at bottom.
+
+
+package tryWithMultipleCatchBlock;
+
+public class MulticatchBlockDemo {
+
+	public static void main(String[] args) {
+		try {
+		int a=10;
+		int b=2;
+		int c=a/b;
+		System.out.println(c);
+		
+		String s=null;
+		System.out.println(s.length());
+		
+		String s1="123";
+		Integer i=Integer.parseInt(s1);
+		System.out.println(i);
+		}
+		
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		catch(NullPointerException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		catch(NumberFormatException e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

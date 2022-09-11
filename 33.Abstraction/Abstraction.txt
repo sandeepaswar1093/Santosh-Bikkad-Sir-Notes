@@ -1,0 +1,113 @@
+Abstraction : Abstraction is process of hiding internal implementation 
+and only highlightimg those services we are offering is called as abstraction.
+
+Example : ATM.
+
+
+How to achive abstraction java?
+
+1)Abstract class(80 %)
+2)Interface(100 %)
+
+
+1)Abstract class(80 %): A class which contain abstract keyword in its declaration is called as abstract class.
+
+Syntax: public abstract  class Demo{
+-----------
+----------
+---------
+}
+
+
+Rule 1) We cant create object of abstract class.
+
+Example :
+
+
+package abstraction;
+
+public abstract class Demo {
+
+	public static void main(String[] args) {
+	
+		Demo d=new Demo();// we cant create object of abstract class.
+	}
+}
+
+
+
+
+
+Rule 2) abstract class can have abstract and non abstract methods.
+       abstract methods we can declare only.
+       non abstract methods can have implementation.
+
+
+Example:
+
+package abstraction;
+
+public abstract class Demo {
+
+  public abstract void display(); // abstract method
+	public void show() {// non abstract method
+		
+	}
+}
+
+
+
+Rule 3: Abstract class may or may not contaion abstract methods.
+
+
+Example 1:
+
+
+package abstraction;
+
+public abstract class Demo {
+
+  public abstract void display(); // abstract method
+	public void show() {// non abstract method
+		
+	}
+}
+
+Example 2:
+
+
+package abstraction;
+
+public abstract class Demo {
+
+ 
+	public void show() {// non abstract method
+		
+	}
+}
+
+
+Rule no 4: I f we take one or more abstract methods in class then we have to compusary make class as abstract.
+
+Example :
+
+package abstraction;
+
+public abstract class Demo {
+
+ public abstract void display();
+ 
+ public abstract void show();
+ 
+	public void show1() {// non abstract method
+		
+	}
+}
+
+
+
+
+
+
+
+

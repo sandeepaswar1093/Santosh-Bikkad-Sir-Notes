@@ -1,0 +1,70 @@
+Automatic Promotion In Method Overloading.
+
+Example 1:
+
+
+package automaticPromotion;
+
+public class AutomaticPromoltionInJava {
+
+	public void m1(int i) {
+	System.out.println("int args");	
+	}
+	
+	public void m1(float f) {
+		System.out.println("float args");	
+		}
+	public void m1(long l ) {
+		System.out.println("long args");	
+		}
+	
+	public void m1(double d ) {
+		System.out.println("long args");	
+		}
+	
+	public static void main(String[] args) {
+		
+		AutomaticPromoltionInJava apj=new AutomaticPromoltionInJava();
+		apj.m1(100);
+		apj.m1(10f);
+		apj.m1(10l);
+		apj.m1(50.00);
+	}
+}
+
+
+
+
+Example 2:
+
+
+
+package automaticPromotion;
+
+public class AutomaticPromoltionInJava {
+
+	public void m1(int i) {
+	System.out.println("int args");	
+	}
+	
+	public void m1(float f) {
+		System.out.println("float args");	
+		}
+	public void m1(long l ) {
+		System.out.println("long args");	
+		}
+	
+	public void m1(double d ) {
+		System.out.println("long args");	
+		}
+	
+	public static void main(String[] args) {
+		
+		AutomaticPromoltionInJava apj=new AutomaticPromoltionInJava();
+		apj.m1(100);
+		apj.m1('C');
+		apj.m1(10f);
+		apj.m1(10l);
+		apj.m1(50.00);
+	}
+}

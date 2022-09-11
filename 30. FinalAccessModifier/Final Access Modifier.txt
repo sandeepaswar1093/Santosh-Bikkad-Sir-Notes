@@ -1,0 +1,179 @@
+Final Access Modifier:
+
+Final is modifier/keyword which provides restriction.
+
+In java we can use final modifier in three ways.
+1)final with variable.
+2)final with methods.
+3)final with class.
+
+
+1)final with variable: once we declare variable as final then we can not perform re-assignment.
+
+Example :
+
+package finalAccessModifier;
+
+public class FinalWithVariable {
+
+	public static void main(String[] args) {
+
+		final int a = 10;
+		System.out.println(a);
+		a=20;// we cant not reassign value to final variable
+		System.out.println(a);
+	}
+}
+
+
+2)final with methods: when we declare method as final then it can not be overrriden to our extended class.
+
+Example :
+
+
+package finalAccessModifier;
+
+public class Parent {
+
+	public void show() {
+		System.out.println("Parent class show methdo");
+	}
+	
+   final public void display() {
+		System.out.println("Parent class display method");
+	}
+}
+
+
+
+
+package finalAccessModifier;
+
+public class Child extends Parent{
+
+	public void show() {
+		System.out.println("Show method of child class");
+	}
+	
+	
+	    public void display() {// we can not override
+			System.out.println("Parent class display method");
+		}
+	
+	
+	public static void main(String[] args) {
+		Child c=new Child();
+		c.show();
+		c.display();
+	}
+}
+
+
+Example 3: We can inherit final methods
+
+
+package finalAccessModifier;
+
+public class Parent {
+
+	public void show() {
+		System.out.println("Parent class show methdo");
+	}
+	
+   final public void display() {
+		System.out.println("Parent class display method");
+	}
+}
+
+
+package finalAccessModifier;
+
+public class Child extends Parent{
+
+	public void show() {
+		System.out.println("Show method of child class");
+	}
+	
+	
+	 
+	
+	public static void main(String[] args) {
+		Child c=new Child();
+		c.show();
+		c.display();
+	}
+}
+
+
+
+3)final with class: We can not extend parent class properties into child class when we declare class as final.
+
+Example :
+
+
+
+package finalAccessModifier;
+
+public final class Parent {
+
+	public void show() {
+		System.out.println("Parent class show methdo");
+	}
+	
+}
+
+
+
+package finalAccessModifier;
+
+public class Child extends Parent {
+
+	public void display() {
+		System.out.println("display method of child class");
+	}
+
+	public static void main(String[] args) {
+		Child c = new Child();
+		c.show();
+		c.display();
+	}
+}
+
+
+Example :    if we declare class as final then we can create object of that class into another class.
+
+package finalAccessModifier;
+
+public final class Parent {
+
+	public void show() {
+		System.out.println("Parent class show methdo");
+	}
+	
+}
+
+
+
+package finalAccessModifier;
+
+public class Child  {
+
+	public void display() {
+		System.out.println("display method of child class");
+	}
+
+	public static void main(String[] args) {
+	
+		Parent p=new Parent();
+		p.show();
+		
+		Child c = new Child();
+		
+		c.display();
+	}
+}
+
+
+
+
+

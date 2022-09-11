@@ -1,0 +1,45 @@
+package indiaListExample;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class IndiaList {
+
+	public static void main(String[] args) {
+		
+		
+		List<String> mh=new ArrayList();
+		mh.add("Pune");
+		mh.add("Mumbai");
+		
+		System.out.println(mh);
+		List<String> gj=new ArrayList();
+		gj.add("Surat");
+		gj.add("Gandhinagar");
+		System.out.println(gj);
+		
+		List<List<String>> india=new ArrayList();
+		india.add(mh);
+		india.add(gj);
+		System.out.println(india);
+		
+		Iterator<List<String>> iterator = india.iterator();
+		
+		while(iterator.hasNext()) {
+			List<String> states = iterator.next();
+			System.out.println(states);
+			
+			Iterator<String> iterator2 = states.iterator();
+			while(iterator2.hasNext()) {
+				String city = iterator2.next();
+				System.out.println(city);
+				
+			}
+		}
+		
+		
+		
+	}
+	
+}

@@ -1,0 +1,211 @@
+Throws Keyword:
+1)Throws keyword is used for propogating the exception.
+2)By using throws keyword we can give chance to caller method to handle exception.
+3)throws keyword will be followed by exception class or multiple exception class.
+
+Note : 1) In case of unchecked exception no need to write throws keyword .it will propogate bydefault.
+2)In case of checked Exception we need to write throws keyword for propogation exception.
+
+
+1)
+package throwsKeyword;
+
+public class InterruptedExceptionDemo {
+
+	public static void main(String[] args) throws InterruptedException   {
+		
+		for(int i=0;i<=10;i++) {
+			System.out.println("Welcome to Bikkad IT");
+			Thread.sleep(1000);
+				
+			
+		}
+	}
+}
+
+
+
+2)
+
+package throwsKeyword;
+
+public class ClassNotFoundExceptionDemo {
+
+	
+	public static void main(String[] args)  {
+
+		System.out.println("Main Method start");
+		
+		try {
+			Class.forName("throwsKeyword.InterruptedExceptionDemo")
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
+
+
+3)
+
+package throwsKeyword;
+
+public class ClassNotFoundExceptionDemo {
+
+	
+	public static void main(String[] args) throws ClassNotFoundException  {
+
+		System.out.println("Main Method start");
+		
+		
+			Class.forName("throwsKeyword.InterruptedExceptionDemo");
+		
+	}
+}
+
+
+4)
+
+package throwsKeyword;
+
+public class ClassNotFoundExceptionDemo {
+
+	public static void m1() throws ClassNotFoundException {
+		System.out.println("m1 method start");
+	
+			m2();
+		
+	}
+
+	public static void m2() throws ClassNotFoundException  {
+		System.out.println("m2 method start");
+
+			Class.forName("throwsKeyword.InterruptedExceptionDemo");
+		
+
+	}
+
+	public static void main(String[] args)  {
+
+		System.out.println("Main Method start");
+		try {
+			m1();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+}
+
+
+5)
+
+package throwsKeyword;
+
+public class ClassNotFoundExceptionDemo {
+
+	public static void m1(){
+		System.out.println("m1 method start");
+	
+			try {
+				m2();
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+	}
+
+	public static void m2() throws ClassNotFoundException  {
+		System.out.println("m2 method start");
+
+			Class.forName("throwsKeyword.InterruptedExceptionDemo");
+		
+
+	}
+
+	public static void main(String[] args)   {
+
+		System.out.println("Main Method start");
+		
+			m1();
+		
+
+	}
+}
+
+
+
+6)
+
+package throwsKeyword;
+
+public class ClassNotFoundExceptionDemo {
+
+	public static void m1() throws ClassNotFoundException{
+		System.out.println("m1 method start");
+	
+			
+				m2();
+			
+	}
+
+	public static void m2() throws ClassNotFoundException  {
+		System.out.println("m2 method start");
+
+			Class.forName("throwsKeyword.InterruptedExceptionDemo");
+		
+
+	}
+
+	public static void main(String[] args)   {
+
+		System.out.println("Main Method start");
+		
+			try {
+				m1();
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+
+	}
+}
+
+
+
+7)
+
+package throwsKeyword;
+
+public class ClassNotFoundExceptionDemo {
+
+	public static void m1() throws ClassNotFoundException{
+		System.out.println("m1 method start");
+	
+			
+				m2();
+			
+	}
+
+	public static void m2() throws ClassNotFoundException  {
+		System.out.println("m2 method start");
+
+			Class.forName("throwsKeyword.InterruptedExceptionDemo");
+		
+
+	}
+
+	public static void main(String[] args) throws ClassNotFoundException   {
+
+		System.out.println("Main Method start");
+		
+			
+				m1();
+			
+		
+
+	}
+}

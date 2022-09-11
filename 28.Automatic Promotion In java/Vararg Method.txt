@@ -1,0 +1,106 @@
+# Without var arg Method:
+
+
+package varargMethod;
+
+public class A {
+
+	public void add() {
+		int a=10;
+		int b=20;
+		int c=a+b;
+		System.out.println(c);
+	}
+	public void add(int a) {
+	
+        a=a+a;
+		System.out.println(a);
+	}
+	
+	public void add(int a,int b) {
+		
+      int  c=a+b;
+		System.out.println(c);
+	}
+	
+	public void add(int a,int b,int c) {
+		
+	      int  d=a+b+c;
+			System.out.println(d);
+		}
+	
+	public void add(int a,int b,int c,int d) {
+		
+	      int  e=a+b+c+d;
+			System.out.println(e);
+		}
+	public static void main(String[] args) {
+		 A a=new A();
+		   a.add();
+		   a.add(10);
+		   a.add(10, 20);
+		   a.add(10, 20, 30);
+		   a.add(10, 20, 30, 40);
+	}
+}
+
+
+
+
+# With Vargars Method
+package varargMethod;
+
+public class A {
+
+
+	public void m1(int ...a) {
+
+	int a1=0;
+    for(int a2:a) {
+     a1=a1+a2;	
+ 
+    }
+    System.out.println(a1);
+	}
+	
+	public static void main(String[] args) {
+		 A a=new A();
+		  a.m1(10);
+		  a.m1(20,30);
+		  a.m1(10,20,30);
+		  a.m1(10,20,30,40);
+	}
+}
+
+
+
+
+# Var Arg Method Vs Normal Method
+
+
+package varargMethod;
+
+public class A {
+
+	
+	public void m1(int a) {
+		System.out.println("normal method :"+ a);
+	}
+	public void m1(int ...a) {
+
+	int a1=0;
+    for(int a2:a) {
+     a1=a1+a2;	
+ 
+    }
+    System.out.println(a1);
+	}
+	
+	public static void main(String[] args) {
+		 A a=new A();
+		  a.m1(10);
+		  a.m1(20,30);
+		  a.m1(10,20,30);
+		  a.m1(10,20,30,40);
+	}
+}

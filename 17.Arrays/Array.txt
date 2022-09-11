@@ -1,0 +1,103 @@
+Array : Array is collection of similar type of element.
+
+syntax: data_type variableName[];
+
+There are 3 ways to create array in java
+
+
+1) Array Declaration and memory allocation.
+
+Example:
+
+package arrayTypes;
+
+public class ArrayDemo {
+
+	public static void main(String[] args) {
+		
+		int arr[]=new int[5];
+		arr[0]=10;
+		arr[1]=20;
+		arr[2]=30;
+		arr[3]=40;
+		arr[4]=50;
+		
+		System.out.println(arr[0]);
+		System.out.println(arr[1]);
+		System.out.println(arr[2]);
+		System.out.println(arr[3]);
+		System.out.println(arr[4]);
+	}
+}
+
+Example 2:
+
+
+package arrayTypes;
+
+public class ArrayDemo {
+
+	public static void main(String[] args) {
+		
+		int arr[]=new int[5];//array declaration and memory allocation
+		arr[0]=89;
+		arr[1]=20;
+		arr[2]=55;
+		arr[3]=40;
+		arr[4]=50;
+		
+		for(int i=0;i<5;i++) {
+			System.out.println(arr[i]);
+		}
+		
+	}
+}
+
+
+
+2) first array declaration and then memory allocation
+
+
+Example:
+
+package arrayTypes;
+
+public class ArrayDemo {
+
+	public static void main(String[] args) {
+		
+		int arr[];//array declaration
+		arr=new int[5];// memory allocation
+		arr[0]=89;
+		arr[1]=20;
+		arr[2]=55;
+		arr[3]=40;
+		arr[4]=50;
+		
+		for(int i=0;i<5;i++) {
+			System.out.println(arr[i]);
+		}
+		
+	}
+}
+
+3)array declaration,memeory allocation,initialization.
+
+
+Example :
+
+package arrayTypes;
+
+public class ArrayDemo {
+
+	public static void main(String[] args) {
+		
+		int arr[]= {10,20,30,40,50};//array declaration,memeory allocation,initialization
+		
+		
+		for(int i=0;i<5;i++) {
+			System.out.println(arr[i]);
+		}
+		
+	}
+}

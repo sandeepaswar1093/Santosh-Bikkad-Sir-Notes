@@ -1,0 +1,140 @@
+Types Of inheritance :
+
+1) Single Inheritance/Simple Inheritance
+2)Multilevel Inheritance
+3) Multiple Inheritance
+4)Hierarichical Inheritance
+5)Hybrid Inheritance
+
+
+1) Single Inheritance/Simple Inheritance
+
+Example:
+
+package singleInheritance;
+
+public class Parent {
+
+	public void m1() {
+		System.out.println("m1 method of class Parent");
+	}
+}
+
+
+2)Multilevel Inheritance:
+
+
+
+package multilevelInheritance;
+
+public class Parent {
+
+	public void add() {
+		int a=10;
+		int b=20;
+		int c=a+b;
+		System.out.println("Addition ="+c);
+	}
+}
+
+
+package multilevelInheritance;
+
+public class Child1 extends Parent{
+
+
+	public void sub() {
+		int a=30;
+		int b=20;
+		int c=a-b;
+		System.out.println("Sub ="+c);
+	}
+}
+
+
+
+package multilevelInheritance;
+
+public class Child2 extends Child1 {
+
+
+	public void mul() {
+		int a=10;
+		int b=20;
+		int c=a*b;
+		System.out.println("Multi ="+c);
+	}
+	
+	public static void main(String[] args) {
+		
+		Child2 c2 =new Child2();
+		c2.add();
+		c2.sub();
+		c2.mul();
+	}
+}
+
+
+package singleInheritance;
+
+public class Child extends Parent{
+
+	public void m2() {
+		System.out.println("m2 method of Child class");
+	}
+	
+	public static void main(String[] args) {
+		
+		Child c=new Child();
+		c.m1();
+		c.m2();
+	}
+}
+
+
+
+3) Multiple Inheritance:(Java Doesnt support for multiple inheritance)
+
+
+package multipleInheritance;
+
+public class Parent1 {
+
+	public void m1() {
+		System.out.println("m1 method of Parent 1");
+	}
+
+}
+
+
+
+package multipleInheritance;
+
+public class Parent2 {
+
+	public void m1() {
+		System.out.println("M1 method of parent2");
+	}
+
+}
+
+
+
+package multipleInheritance;
+
+public class Child extends Parent1,Parent2{
+
+	public void m2() {
+		System.out.println("m2 method of class Child");
+	}
+	public static void main(String[] args) {
+		
+	Child c=new Child();	
+	c.m1();
+	c.m2();
+	}
+}
+
+
+
+

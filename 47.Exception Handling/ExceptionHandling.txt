@@ -1,0 +1,80 @@
+Exception: An unwanted unexpected event that distrubs normal flow of program is
+callled Exception.
+
+Exception Handling :
+
+If in our program exception occurs .we have to provide alternate way to continue
+ the execution of program normally .this way of defining alternate way is nothing 
+but Exception handling.
+
+
+Example : Without Exception
+
+package typesOfException;
+
+public class ArithmeticExceptionDemo {
+
+	public static void main(String[] args) {
+
+		int a = 10;
+         int b = 2;
+        int c = a / b;
+        System.out.println(c);
+	}
+
+}
+
+Example : When Exception Occurs in Program
+
+
+package typesOfException;
+
+public class ArithmeticExceptionDemo {
+
+	public static void main(String[] args) {
+		System.out.println("Main method Started ");
+
+		int a = 10;
+		int b = 0;
+		int c = a / b;
+		System.out.println(c);
+
+		System.out.println("Welcome to bikkad It");
+		System.out.println("I want to beacome java Developer");
+
+	}
+
+}
+
+Example 3: After Handling Exception.
+
+
+
+package typesOfException;
+
+public class ArithmeticExceptionDemo {
+
+	public static void main(String[] args) {
+		System.out.println("Main method Started ");
+
+		int a = 10;
+		int b = 0;
+		try {
+		
+		int c = a / b;
+	   System.out.println(c);
+		}
+		catch(ArithmeticException e) {
+			
+		}
+		System.out.println("Welcome to bikkad It");
+		System.out.println("I want to beacome java Developer");
+
+	}
+
+}
+
+
+
+
+

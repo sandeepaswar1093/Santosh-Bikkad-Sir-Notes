@@ -1,0 +1,160 @@
+Example :
+
+package methodTypes;
+
+import java.util.Scanner;
+
+public class MethodDemo {
+
+	public int add(int a, int b) {
+
+		int c = a + b;
+		return c;
+
+	}
+
+	public int sub(int a, int b) {
+
+		int c = a - b;
+		return c;
+
+	}
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter first number");
+		int a;
+		a = sc.nextInt();
+		System.out.println("Enter Second Number");
+		int b;
+		b = sc.nextInt();
+		MethodDemo m = new MethodDemo();
+		int result = m.add(a, b);
+		System.out.println("Addition " + result);
+		int result1 = m.sub(a, b);
+		System.out.println("Substraction  " + result1);
+		
+		int result3=result *result1;
+		System.out.println("Multi of Result and result1 ="+result3);
+	}
+}
+
+
+
+Example 2: Method calling in same package
+
+
+
+package methodCallingInSamePackage;
+
+public class A {
+
+	public  void m1() {
+		System.out.println("m1 method of class A");
+	}
+	
+public static void main(String[] args) {
+		
+		A a=new A();
+		a.m1();
+		
+		B b=new B();
+		b.m2();
+	}
+
+}
+
+
+
+package methodCallingInSamePackage;
+
+public class B {
+
+	public  void m2() {
+		System.out.println("m2 method of class B");
+	}
+
+	
+
+	}
+
+
+
+Example 3:
+
+
+package methodCallingInSamePackage;
+
+public class A {
+
+	public  void m1() {
+		System.out.println("m1 method of class A");
+	}
+	
+
+
+}
+
+
+
+package methodCallingInSamePackage;
+
+public class B {
+
+	public  void m2() {
+		System.out.println("m2 method of class B");
+	}
+
+public static void main(String[] args) {
+		
+		A a=new A();
+		a.m1();
+		
+		B b=new B();
+		b.m2();
+	}
+
+	}
+
+
+Example 4:
+
+package methodCallingInSamePackage;
+
+public class A {
+
+	public  void m1() {
+		System.out.println("m1 method of class A");
+	}
+	
+
+}
+
+
+package methodCallingInSamePackage;
+
+public class B {
+
+	public  void m2() {
+		System.out.println("m2 method of class B");
+	}
+
+	
+
+	}
+
+
+package methodCallingInSamePackage;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		A a=new A();
+		a.m1();
+		
+		B b=new B();
+		b.m2();
+	}
+}

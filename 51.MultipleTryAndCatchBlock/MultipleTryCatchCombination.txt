@@ -1,0 +1,152 @@
+Multiple TryCatch Block:
+
+syntax:
+
+try{
+
+}catch{
+
+}
+
+try{
+
+}catch(){
+
+
+}
+
+
+Example :
+
+
+package multipleTryCatchBlock;
+
+public class MultiTryCatchBlock {
+
+	public static void main(String[] args) {
+		
+		
+		int arr[]= {10,20,30};
+		try {
+		System.out.println(arr[3]);
+		}catch(ArrayIndexOutOfBoundsException a) {
+			System.out.println(a.getMessage());
+		}
+		int a=10;
+		int b=0;
+		try {
+		int c=a/b;
+		}catch(ArithmeticException e) {
+			System.out.println(e);
+		}
+	}
+	
+	
+}
+
+
+
+
+
+Nested try Block:
+
+try{
+
+try{
+
+}catch(){
+
+}
+}catch(){
+
+
+}
+
+
+Example :
+
+
+package multipleTryCatchBlock;
+
+public class NestedTryBlock {
+
+	public static void main(String[] args) {
+		
+		try {
+			
+			try {
+				int arr[]= {10,30,50};
+				System.out.println(arr[5]);
+			}catch(ArrayIndexOutOfBoundsException a){
+				
+				System.out.println(a.getMessage());
+			}
+			
+			int a=10;
+			int b=0;
+		 int c=a/b;
+		}catch(ArithmeticException e) {
+			System.out.println(e.getMessage());
+			
+		}
+	}
+	
+}
+
+
+
+Nested Catch:
+
+
+try{
+
+}catch(){
+
+try{
+
+}catch(){
+}
+
+
+}
+
+
+Example :
+
+
+package multipleTryCatchBlock;
+
+public class NestedCatchBlock {
+
+	public static void main(String[] args) {
+
+		try {
+
+			String s = "Santosh";
+
+			Integer parseInt = Integer.parseInt(s);
+		} catch (NumberFormatException n) {
+			System.out.println(n);
+
+			try {
+				String s1 = null;
+				System.out.println(s1.toUpperCase());
+			} catch (NullPointerException e) {
+				System.out.println(e);
+			}
+		}
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

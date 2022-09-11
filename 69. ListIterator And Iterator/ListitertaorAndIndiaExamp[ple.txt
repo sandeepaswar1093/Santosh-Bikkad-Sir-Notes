@@ -1,0 +1,132 @@
+The 3 Cursors of Java:
+ If we want to get Objects One by One from the Collection then we should go for Cursors.
+ There are 3 Types of Cursors Available in Java.
+1) Enumeration
+2) Iterator
+3) ListIterator
+
+1) Enumeration:
+ We can Use Enumeration to get Objects One by One from the Collection.
+ We can Create Enumeration Object by using elements().
+public Enumeration elements();
+Eg:Enumeration e = v.elements(); //v is Vector Object.
+
+Methods:
+1) public boolean hasMoreElements();
+2) public Object nextElement();
+
+
+
+
+
+
+
+Limitations of Enumeration:
+ Enumeration Concept is Applicable Only for Legacy Classes and it is Not a Universal
+Cursor.
+ By using Enumeration we can Perform Read Operation and we can't Perform Remove
+Operation.
+To Overcome Above Limitations we should go for Iterator.
+
+
+
+
+2) Iterator:
+ We can Use Iterator to get Objects One by One from Collection.
+ We can Apply Iterator Concept for any Collection Object. Hence it is Universal Cursor.
+ By using Iterator we can Able to Perform Both Read and Remove Operations.
+ We can Create Iterator Object by using iterator() of Collection Interface.
+public Iterator iterator();
+Eg:Iterator itr = c.iterator(); //c Means any Collection Object.
+Methods:
+1) public boolean hasNext()
+2) public Object next()
+3) public void remove()
+
+
+
+
+
+
+
+Limitations:
+ By using Enumeration and Iterator we can Move Only towards Forward Direction and we
+can’t Move Backward Direction. That is these are Single Direction Cursors but NotBi-
+Direction.
+ By using Iterator we can Perform Only Read and Remove Operations and we can't Perform
+Addition of New Objects and Replacing Existing Objects.
+To Overcome these Limitations we should go for ListIterator.
+
+
+
+3) ListIterator:
+ ListIterator is the Child Interface of Iterator.
+ By using ListIterator we can Move Either to the Forward Direction OR to the
+Backward Direction. That is it is a Bi-Directional Cursor.
+ By using ListIterator we can Able to Perform Addition of New Objects andReplacing
+existing Objects. In Addition to Read and Remove Operations.
+ We can Create ListIterator Object by using listIterator().
+public ListIterator listIterator();
+Eg:ListIteratorltr = l.listIterator(); //l is Any List Object
+Methods:
+ ListIteratoris the Child Interface of Iterator and Hence All Iterator Methods by Default
+Available to the ListIterator.
+
+
+ListIteratorDefines the following 9 Methods
+
+public boolean hasNext()
+public Object next()
+public int nextIndex()
+
+public boolean hasPrevious()
+public Object previous()
+public int previousIndex()
+
+public void remove()
+public void set(Object new)
+public void add(Object new)
+
+Example:
+
+
+
+package cursors;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
+
+public class ListIteratorDemo {
+
+	public static void main(String[] args) {
+
+		List l = new ArrayList();
+
+		l.add("Welcome");
+		l.add("To");
+		l.add("BikkadIT");
+
+		ListIterator listIterator = l.listIterator();
+
+		System.out.println("Forword Direction");
+
+		while (listIterator.hasNext()) {
+			int nextIndex = listIterator.nextIndex();
+			System.out.println(nextIndex);
+			Object next = listIterator.next();
+			System.out.println(next);
+		}
+
+		System.out.println("Backword Direction");
+
+		while (listIterator.hasPrevious()) {
+			int previousIndex = listIterator.previousIndex();
+			System.out.println(previousIndex);
+			Object previous = listIterator.previous();
+			System.out.println(previous);
+		}
+
+	}
+}
+

@@ -1,0 +1,390 @@
+
+Instance Block: Instance block is similar to method which has no name.
+
+Syntax: {
+
+        }
+
+Example :
+
+package constructorTypes;
+
+public class InstanceDemo {
+
+	{
+	System.out.println("Instance Block");
+	}
+	
+	public static void main(String[] args) {
+	
+		InstanceDemo i=new InstanceDemo();	
+	}
+}
+
+
+Example 2:
+
+
+package constructorTypes;
+
+public class InstanceDemo {
+
+	{
+	System.out.println("Instance Block");
+	}
+	
+	public static void main(String[] args) {
+	
+		InstanceDemo i=new InstanceDemo();	
+		
+		InstanceDemo i1=new InstanceDemo();	
+	}
+}
+
+
+Static block: Static block gets executed at the time of loading .class file into jvm.
+Static block executes only one time.
+
+
+Syntax: static {
+              
+               }
+
+Example1  :
+
+package constructorTypes;
+
+public class StaticDemo {
+
+	static {
+		System.out.println("Static block");
+	}
+	public static void main(String[] args) {
+		
+		
+	}
+}
+
+Example 2:
+
+
+package constructorTypes;
+
+public class StaticDemo {
+
+	static {
+		System.out.println("Static block");
+	}
+	public static void main(String[] args) {
+		
+		StaticDemo s=new StaticDemo();
+	}
+}
+
+
+Example 3:
+
+
+package constructorTypes;
+
+public class StaticDemo {
+
+	static {
+		System.out.println("Static block");
+	}
+	public static void main(String[] args) {
+		
+		StaticDemo s=new StaticDemo();
+		
+		StaticDemo s1=new StaticDemo();
+	}
+}
+
+
+Example 4: Static and instance block
+
+package constructorTypes;
+
+public class StaticAndInstace {
+
+	{
+		System.out.println("Instance Block");
+	}
+	static {
+		System.out.println("Static block");
+	}
+	public static void main(String[] args) {
+		
+	}
+}
+
+Example :
+
+
+package constructorTypes;
+
+public class StaticAndInstace {
+
+	{
+		System.out.println("Instance Block");
+	}
+	static {
+		System.out.println("Static block");
+	}
+	public static void main(String[] args) {
+		
+		StaticAndInstace si=new StaticAndInstace();
+	}
+}
+
+
+Example : Instance block and Constyructor
+
+package constructorTypes;
+
+public class InstanceAndConstructor {
+
+	{
+		System.out.println("Instance Block");
+	}
+	
+	InstanceAndConstructor(){
+		System.out.println("constructor");
+	}
+	
+	public static void main(String[] args) {
+		
+		InstanceAndConstructor i=new InstanceAndConstructor();
+		
+	}
+}
+
+Example : Instance ,Static and Constructor
+
+package constructorTypes;
+
+public class StaticANdInstanceAndConstructor {
+
+	{
+		System.out.println("Instance Block");
+	}
+	
+	static{
+		System.out.println("Static Block");
+	}
+	
+	StaticANdInstanceAndConstructor(){
+		System.out.println("Constructor");
+	}
+	public static void main(String[] args) {
+		StaticANdInstanceAndConstructor s=new StaticANdInstanceAndConstructor();
+		
+		
+	}
+}
+
+Example :
+
+package constructorTypes;
+
+public class StaticANdInstanceAndConstructor {
+
+	{
+		System.out.println("Instance Block1");
+	}
+	
+	static{
+		System.out.println("Static Block");
+	}
+	
+	StaticANdInstanceAndConstructor(){
+		System.out.println("Constructor");
+	}
+	{
+		System.out.println("Instance Block 2");
+	}
+	public static void main(String[] args) {
+		StaticANdInstanceAndConstructor s=new StaticANdInstanceAndConstructor();
+		
+		
+	}
+}
+
+Example 2:
+
+package constructorTypes;
+
+public class StaticANdInstanceAndConstructor {
+
+	
+	{
+		System.out.println("Instance Block 2");
+	}
+	
+	{
+		System.out.println("Instance Block1");
+	}
+	
+	static{
+		System.out.println("Static Block");
+	}
+	
+	StaticANdInstanceAndConstructor(){
+		System.out.println("Constructor");
+	}
+	
+	public static void main(String[] args) {
+		StaticANdInstanceAndConstructor s=new StaticANdInstanceAndConstructor();
+		
+		
+	}
+}
+
+Example :
+
+
+package constructorTypes;
+
+public class StaticANdInstanceAndConstructor {
+
+	
+	{
+		System.out.println("Instance Block 2");
+	}
+	
+	{
+		System.out.println("Instance Block1");
+	}
+	
+	static{
+		System.out.println("Static Block");
+	}
+	
+	StaticANdInstanceAndConstructor(){
+		System.out.println("Constructor");
+	}
+	
+	public static void main(String[] args) {
+		StaticANdInstanceAndConstructor s=new StaticANdInstanceAndConstructor();
+		System.out.println("main Method");
+		StaticANdInstanceAndConstructor s1=new StaticANdInstanceAndConstructor();
+	}
+}
+
+
+Example :
+
+package constructorTypes;
+
+public class StaticANdInstanceAndConstructor {
+
+	
+	{
+		System.out.println("Instance Block 2");
+	}
+	
+	{
+		System.out.println("Instance Block1");
+	}
+	
+	static{
+		System.out.println("Static Block1");
+	}
+	
+	StaticANdInstanceAndConstructor(){
+		System.out.println("Constructor");
+	}
+	
+	public static void main(String[] args) {
+		StaticANdInstanceAndConstructor s=new StaticANdInstanceAndConstructor();
+		System.out.println("main Method");
+		StaticANdInstanceAndConstructor s1=new StaticANdInstanceAndConstructor();
+	}
+	
+	static{
+		System.out.println("Static Block2");
+	}
+	
+}
+
+
+Example :
+
+package constructorTypes;
+
+public class StaticANdInstanceAndConstructor {
+
+	
+	{
+		System.out.println("Instance Block 2");
+	}
+	
+	{
+		System.out.println("Instance Block1");
+	}
+	
+	static{
+		System.out.println("Static Block2");
+	}
+	
+	
+	
+	
+	StaticANdInstanceAndConstructor(){
+		System.out.println("Constructor");
+	}
+	
+	public static void main(String[] args) {
+		StaticANdInstanceAndConstructor s=new StaticANdInstanceAndConstructor();
+		System.out.println("main Method");
+		StaticANdInstanceAndConstructor s1=new StaticANdInstanceAndConstructor();
+	}
+	
+	static{
+		System.out.println("Static Block1");
+	}
+}
+
+Example :
+
+
+package constructorTypes;
+
+public class StaticANdInstanceAndConstructor {
+
+	
+	{
+		System.out.println("Instance Block 2");
+	}
+	
+	{
+		System.out.println("Instance Block1");
+	}
+	
+	static{
+		System.out.println("Static Block2");
+	}
+	
+	
+	public void m1() {
+		System.out.println("M1 method");
+	}
+	
+	StaticANdInstanceAndConstructor(){
+		System.out.println("Constructor");
+	}
+	
+	public static void main(String[] args) {
+		StaticANdInstanceAndConstructor s=new StaticANdInstanceAndConstructor();
+		s.m1();
+		System.out.println("main Method");
+		StaticANdInstanceAndConstructor s1=new StaticANdInstanceAndConstructor();
+		s1.m1();
+	}
+	
+	static{
+		System.out.println("Static Block1");
+	}
+}
+
+

@@ -1,0 +1,314 @@
+ain Token: 
+Token is the smallest element of program .
+
+Example:
+public class Addition{
+
+
+public static void main(String args[]){
+
+int a=20;
+int b=10;
+
+int c;
+
+c=a+b;
+
+System.out.println(c);
+}
+}
+
+Example : public ,static, c,{,[,(,void etc
+
+Types of Token:
+
+1)Keyword : Example:public ,class,static, void etc
+
+2)Identifier: Example :Addition,main,a,b, c etc.
+
+3)operator : Example :=,+ etc
+
+4)Seperator :Example : {,(,;,. etc
+
+5) Literals : 10,20 etc
+
+
+
+
+1)Keyword :Keywords are the reserved words whose meaning is already definied by compiler is called as keyword.
+
+
+Keyword for data type(8):
+
+byte
+short
+int 
+long
+float
+double
+char 
+boolean
+
+
+keyword for flow control(11);
+
+if 
+else
+switch
+case
+default
+for
+do
+while
+break
+continue
+return
+
+Keyword related to Access Modifier(11):
+
+public 
+private 
+protected 
+final
+static
+abstract
+synchronized
+native
+strictfp(added in 1.2 version)
+transient
+volatile
+
+
+keyword related to exception handling(6):
+
+try
+catch
+finally
+throw
+throws
+assert(added in 1.4 version)
+
+
+
+
+keyword related to class(6):
+
+class
+package
+import
+extends 
+implements
+interface
+
+
+keyword related to Object(4):
+
+new 
+instanceof
+super
+this
+
+keyword related to void(1):
+
+void
+
+keyword rekated to enum(1):
+
+enum(added in 1.5 version)
+
+Note :All keywords in java are lower case alphabets.
+
+
+
+
+
+
+2)Identifier: In java identifiers is the name of class,name of method,name variable that is used for
+ the identification purpose.
+
+
+Rules:
+
+1) Only allowed charactors in java for identifiers are
+
+a-z
+A-Z
+0-9
+_(underscore)
+$
+
+Example:
+
+public class Rule1 {
+
+	public static void main(String[] args) {
+		
+		int adf=20;
+		System.out.println(adf);
+		
+		int ATS=33;
+		System.out.println(ATS);
+		
+		int aD55=22;
+		System.out.println(aD55);
+		
+		int Dtc_=99;
+		System.out.println(Dtc_);
+		int _Dtc=56;
+		System.out.println(_Dtc);
+		
+		int sfdT$=88;
+		System.out.println(sfdT$);
+		
+		int $sfdT=8998;
+		System.out.println($sfdT);
+		
+		
+		
+	}
+}
+
+
+
+2)Identifiers are not allowed to starts with digits.
+
+int abc6=50; valid
+int 8gfh=59; invalid
+
+
+Example:
+
+public class Rule2 {
+
+	public static void main(String[] args) {
+		
+		int ysT=44;
+		System.out.println(ysT);
+		
+		//int 6TC=99;
+		
+	}
+}
+
+
+3)Java identifiers are case sensitive.
+
+int a=89;
+int A=55;
+
+Example :
+
+
+public class Rule3 {
+
+	public static void main(String[] args) {
+		
+		int A=90;
+		System.out.println(A);
+		
+		int a=78;
+		System.out.println(a);
+	}
+}
+
+
+4) There is no length limit for java identifier but it is not recommended to take more than 15 charactors.
+
+int aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=89; valid but not rerecommended.
+
+int A=66;
+
+Example :
+
+public class Rule4 {
+
+	public static void main(String[] args) {
+		
+		int T=88;
+		System.out.println(T);
+		
+		int TTTTTTTTTTTTTTTTTTTTTTTTTTTTT=89;
+		System.out.println(TTTTTTTTTTTTTTTTTTTTTTTTTTTTT);
+		
+		int number1=77;
+		System.out.println(number1);
+	}
+}
+
+
+5)we cant use keyword as identifier.
+
+int if=44; invalid
+
+int double=55; invalid
+
+Example :
+
+public class Rule5 {
+
+	public static void main(String[] args) {
+		
+		int yy=67;
+		System.out.println(yy);
+		
+	//	int if=77;
+	//	int switch=676;
+	}
+}
+
+
+
+6)All predefinied class and interfaces we can use but it not recommended.
+
+int String=90; it is valid but not recommended.
+
+Example :
+
+public class Rule6 {
+
+	public static void main(String[] args) {
+		
+
+		
+		int String=54;
+		System.out.println(String);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

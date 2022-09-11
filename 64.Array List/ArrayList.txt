@@ -1,0 +1,50 @@
+ArrayList:
+1)The underlying data structure of ArrayList is Resizable or growable Array.
+2)Duplicates Objects are allowed.
+3)Insertion order is preserved.
+4)Heterogenious Objects are allowed.
+5)null insertion is possible in ArrayList.
+
+new Capacity=(current capacity *3/2)+1
+            =(10*3/2)+1
+            =15+1
+            =16
+
+after 16 elements added new capacity will be 
+         =(16*3/2)+1
+         =(8*3)+1
+         =24+1
+         =25
+
+Example 1;
+
+package arraylistdemo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArraylistTest {
+
+	public static void main(String[] args) {
+		
+		ArrayList al=new ArrayList();
+		//List al=new ArrayList();
+		al.add("Santosh");
+		al.add(10);
+		al.add("Santosh");
+		al.add(10);
+		al.add("kamesh");
+		al.add("Tukaram");
+		al.add("Bikkad");
+		al.add("Ganesh");
+		al.add("umesh");
+		al.add("tushar");
+		al.add("Pavan");
+		System.out.println(al);
+		System.out.println(al.size());
+	}
+	
+}
+
+
+

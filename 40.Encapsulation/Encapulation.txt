@@ -1,0 +1,236 @@
+Data Hiding: Hiding internal data is nothing but data hiding.
+
+How to achive Data Hiding?
+
+By declaring variable as private we can achieve data hiding.
+
+Example :
+
+
+package datahiding;
+
+public class Person {
+
+	private int pid;
+	
+	private String pname;
+	
+	private String balance;
+}
+
+
+
+package datahiding;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+
+	Person p=new Person();
+	p.pid=101;
+	System.out.println(p.pid);
+}
+}
+
+
+
+Encapulation : Encapulation is mechanism through which we can wrapping the data members(variables) and 
+data member methods of class into single unit or single unit/entity is called as encapulation. 
+
+Real time example : Medical capsul .
+
+Encapulation=Data Hiding + Abstraction
+
+How to achive encapulation in java ?
+
+1)Declare data variable as private .
+2)Declare method as public .
+
+Example : Java class which has private members and public methods.
+
+
+Example :
+
+
+package encapulation;
+
+public class Account {
+
+	private int accId; // Data Hiding
+	
+	private String accname; // Data Hiding
+
+	public int getAccId() { // abstraction 
+		return accId;
+	}
+
+	public void setAccId(int accId) {  // abstraction 
+		this.accId = accId;
+	}
+
+	public String getAccname() {  // abstraction 
+		return accname;
+	}
+
+	public void setAccname(String accname) { // abstraction 
+		this.accname = accname;
+	}
+	
+	
+	
+}
+
+
+
+
+package encapulation;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		Account acc = new Account();
+		acc.setAccId(199);
+		acc.setAccname("Santosh");
+		
+		System.out.println(acc.getAccId());
+		System.out.println(acc.getAccname());
+	}
+}
+
+
+This keyword :
+
+1) This keyword is used to refer cureent class class object inside method or constructor.
+
+Example 1:
+
+package thisKeyword;
+
+public class A {
+
+	public void show() {
+		System.out.println(this);
+	}
+
+	A() {
+		System.out.println(this);
+
+	}
+
+	public static void main(String[] args) {
+
+		A a = new A();
+		System.out.println(a);
+		a.show();
+	}
+}
+
+
+
+2) whenever the name of instance variable and local variable both are same then Jvm gets confused 
+which one is local variable and which one is instance variable .To avoid above problem we should 
+go for this keyword.
+
+
+Example :
+
+package thisKeyword;
+
+public class B {
+
+	int id;
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public static void main(String[] args) {
+		
+		 B b =new B();
+		 b.setId(10);
+	}
+	
+}
+
+
+3) This keyword is used when we want to call the default constructor of its own class.
+
+Example :
+
+package thisKeyword;
+
+public class C {
+
+	public C() {
+		System.out.println("default constructor");
+	}
+	
+	public C(int a) {
+		this();
+		System.out.println(a);
+	}
+	
+	public static void main(String[] args) {
+		
+		
+		
+		C c1=new C(200);
+	}
+}
+
+4) This keyword is used when we want to call parameterized constructor of its own class.
+
+
+Example 4:
+
+package thisKeyword;
+
+public class D {
+
+	public D() {
+    this(230);
+    System.out.println("Default constructor");
+	}
+
+	public D(int h) {
+		System.out.println(h);
+	}
+	
+	public static void main(String[] args) {
+		
+		D d=new D();
+	}
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+Throw Keyword: Throw keyword is used to throw the used definied exception or customized exception 
+Objct to jvm explicitly.
+
+Example 1:
+
+package throwKeyword;
+
+public class ThrowDemo {
+
+	public static void main(String[] args) {
+		int a = 10;
+		int b = 0;
+		int c = a / b;
+
+	}
+}
+
+
+Example 2:
+
+
+
+package throwKeyword;
+
+public class ThrowDemo1 {
+
+	public static void main(String[] args) {
+
+		throw new ArithmeticException("We can not divide number by zero");
+	}
+}
+
+
+
+Example 3:
+
+
+package throwKeyword;
+
+import java.util.Scanner;
+
+public class Test {
+
+	
+	public void m1(int age) {
+		if(age >=18) {
+			System.out.println("You are eligible for voting");
+		}else {
+			throw new VotingNotEligibleException("You are no eligible for voting");
+			
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENter your age");
+		int age = sc.nextInt();
+		Test t=new Test();
+		t.m1(age);
+	}
+}
+
+
+
+package throwKeyword;
+
+public class VotingNotEligibleException extends RuntimeException{
+
+	VotingNotEligibleException(String msg){
+		System.out.println(msg);
+	}
+}
+
+

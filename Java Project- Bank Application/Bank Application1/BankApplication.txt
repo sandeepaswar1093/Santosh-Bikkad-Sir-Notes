@@ -1,0 +1,65 @@
+package com.bikkadIT.BankApplication.controller;
+
+import java.util.Scanner;
+
+import com.bikkadIT.BankApplication.service.BankServiceImpl;
+
+public class Admin {
+
+	public static void main(String[] args) {
+
+		System.out.println("----------WELCOME TO BANK---------");
+
+		System.out.println("Press 1 for create account");
+		System.out.println("Press 2 for view account");
+		System.out.println("Press 3 for withdraw Money");
+		System.out.println("Press 4 for deposit account");
+		System.out.println("Press 5 for update  account");
+		System.out.println("Press 6 for EXIT");
+
+		Scanner sc = new Scanner(System.in);
+		int ch = sc.nextInt();
+
+		switch (ch) {
+
+		case 1:
+			BankServiceImpl bankServiceImpl = new BankServiceImpl();
+			     bankServiceImpl.addAccount();
+			break;
+		default:
+			break;
+
+		}
+	}
+
+}
+
+
+
+package com.bikkadIT.BankApplication.model;
+
+public class Account {
+
+}
+
+
+
+package com.bikkadIT.BankApplication.service;
+
+public interface BankServiceI {
+
+	public abstract void addAccount();
+}
+
+
+
+package com.bikkadIT.BankApplication.service;
+
+public class BankServiceImpl implements BankServiceI{
+
+	@Override
+	public void addAccount() {
+		
+	}
+
+}

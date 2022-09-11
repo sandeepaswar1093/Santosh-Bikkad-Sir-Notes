@@ -1,0 +1,81 @@
+Generics :This feature came into jdk 1.5 version.
+The main purpose of jenerics is to provide type safety.
+Through generics  classcast exception problem will overcome.
+There is no need to typecast.
+
+1)without generics:
+
+Example:
+package withoutGenerics;
+
+import java.util.ArrayList;
+
+public class Test1 {
+
+	public static void main(String[] args) {
+		
+		ArrayList al=new ArrayList();
+       
+		al.add(1);
+		al.add(2);
+		al.add("Santosh");
+		al.add("Bikkad");
+		System.out.println(al);
+		
+		 Integer s3= (Integer) al.get(0);
+		    System.out.println(s3);
+		    Integer s2= (Integer) al.get(1);
+		    System.out.println(s2);
+		String s= (String) al.get(2);
+	     System.out.println(s);
+	    String s1= (String) al.get(3);
+	    System.out.println(s1);
+	}
+}
+
+2)With generics:
+
+Example:
+
+package withGenerics;
+
+import java.util.ArrayList;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		ArrayList<String> al=new ArrayList<String>();
+	       
+		al.add("Santosh");
+		al.add("Bikkad");
+		System.out.println(al);
+		String  s= al.get(0);
+        System.out.println(s);
+		
+		ArrayList<Integer> al1=new ArrayList<Integer>();
+		al1.add(1);
+		al1.add(2);
+		System.out.println(al1);
+	    Integer	i=al1.get(1);
+	    System.out.println(i);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

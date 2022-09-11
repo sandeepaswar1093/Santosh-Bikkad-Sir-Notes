@@ -1,0 +1,267 @@
+MultiThreading:MultiThreading is a process of executing multiple threads at same time without
+ dependancy of other threads is called as multiThreading.
+
+Example MultiThreading :
+
+
+
+package creatingThread;
+
+public class Demo{
+
+	public void fun() {
+		for (int i = 1; i <=5; i++) {
+            System.out.println("Welcome to Bikkad It");
+            try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}
+
+
+
+package creatingThread;
+
+public class Test {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		Demo d=new Demo();
+		d.fun();
+		   
+		
+		for (int i = 1; i <= 5; i++) {
+			System.out.println("I Want become Java Developer");
+			Thread.sleep(1000);
+		}
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+How to create Threads in java?
+
+1)By extending Thread Class.
+2)By implementing Runnable Interface.
+
+
+
+
+
+
+
+
+1)By extending Thread Class:
+
+Example 1:
+
+package createThreadbyThredClass;
+
+public class ThreadDemo extends Thread {
+
+	public void run() {
+		for (int i = 0; i < 10; i++) {
+			System.out.println("Welcome to Bikkad It");
+
+		}
+	}
+}
+
+
+package createThreadbyThredClass;
+
+public class Test {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		ThreadDemo t = new ThreadDemo();
+
+		t.start();
+		for (int i = 0; i < 10; i++) {
+			System.out.println("I am Java Developer");
+			
+		}
+	}
+}
+
+
+
+Example 2:
+
+package createThreadbyThredClass;
+
+public class ThreadDemo extends Thread {
+
+	public void run() {
+		for (int i = 0; i < 10; i++) {
+			System.out.println("Welcome to Bikkad It");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}
+
+
+package createThreadbyThredClass;
+
+public class Test {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		ThreadDemo t = new ThreadDemo();
+
+		t.start();
+		for (int i = 0; i < 10; i++) {
+			System.out.println("I am Java Developer");
+			Thread.sleep(1000);
+		}
+	}
+}
+
+
+
+
+
+
+
+2)By implementing Runnable Interface.:
+
+
+
+Example 1:
+
+
+
+package creatingThreadUsingRunnableInterface;
+
+public class ThreadDemo implements Runnable {
+
+	@Override
+	public void run() {
+		
+		for(int i=0;i<10;i++) {
+			System.out.println("Welcome to bikkad IT");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
+}
+
+
+
+package creatingThreadUsingRunnableInterface;
+
+public class Test {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		ThreadDemo td=new ThreadDemo();
+		
+		Thread t=new Thread(td);
+		 t.start();
+		for(int i=1;i<=10;i++) {
+			System.out.println("Main Thread ");
+			Thread.sleep(1000);
+		}
+	}
+}
+
+
+
+Example 3:
+
+
+package creatingThread;
+
+public class Demo extends Thread{
+
+	public void run() {
+		for (int i = 1; i <=5; i++) {
+            System.out.println("Demo class Method");
+            try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}
+
+
+
+package creatingThread;
+
+public class Demo1 extends Thread{
+
+	
+	public void run() {
+		for (int i = 1; i <=5; i++) {
+            System.out.println("Demo1 class method");
+            try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}}
+
+
+
+package creatingThread;
+
+public class Test {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		Demo d = new Demo();
+            d.start();
+	
+            Demo1 d1=new Demo1();
+            d1.start();
+            
+            for (int i = 1; i <= 5; i++) {
+			System.out.println("Main Thread");
+			Thread.sleep(10000);
+		}
+            
+            for(int i=1;i<=3;i++) {
+    			System.out.println("Main Thread1 ");
+    			Thread.sleep(1000);
+    		}
+
+	}
+}

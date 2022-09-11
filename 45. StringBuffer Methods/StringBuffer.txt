@@ -1,0 +1,125 @@
+StringBuffer:
+
+1) If the content will change the frequenty then never use String object because in String every
+ changes new Object will be created.
+2)To handle this type of requirmrnt we should go for StringBufffer.
+
+Constructors in StringBuffer:-
+
+1) StringBuffer sb=new StringBuffer();
+Creates empty StringBuffer Object with default initial capacity of 16.
+
+New Capacity=(current capacity +1)*2
+            = (16+1)*2
+            =(17)*2
+            =34.
+
+2)StringBuffer sb=new StringBuffer(100);
+
+3)StringBffer sb=new StringBuffer(String s);
+creates an equivalent StringBuffer Object with capaity=sb.lengh()+16.
+
+Example :
+
+
+package stringBuffer;
+
+public class StringBufferDemo {
+
+public static void main(String[] args) {
+		
+		StringBuffer sb=new StringBuffer();
+		System.out.println(sb.capacity());
+		sb.append("abcdefghijklmnfg");
+		System.out.println(sb.capacity());
+		System.out.println(sb.length());
+		sb.append("i");
+	   System.out.println(sb.capacity());
+	   System.out.println(sb.length());
+	   
+	   StringBuffer sb1=new StringBuffer(100);
+	   sb1.append("djgfdshfjhdkjfhdjfhsj");
+	   System.out.println(sb1.capacity());
+	   System.out.println(sb1.length());
+	   
+	   StringBuffer sb2=new StringBuffer("SantoshBikkad");
+	   System.out.println(sb2.capacity());   
+	   
+}
+}
+
+
+
+StringBuffer Methods :
+
+
+package stringBuffer;
+
+public class StringBufferMethods {
+
+	public static void main(String[] args) {
+	
+		StringBuffer sb=new StringBuffer("SantoshBikkad");
+		System.out.println(sb.length());
+		System.out.println(sb.capacity());
+		System.out.println(sb.charAt(5));
+		//System.out.println(sb.charAt(15));
+		sb.setCharAt(5, 'z');
+		System.out.println(sb);
+		sb.append(true);
+		System.out.println(sb);
+		sb.append(10000);
+		System.out.println(sb);
+		
+		StringBuffer sb1=new StringBuffer("SantoshBikkadPune");
+		sb1.insert(5, "xyz");
+		System.out.println(sb1);
+		sb1.insert(1, 'T');
+		System.out.println(sb1);
+		
+		
+		StringBuffer sb2=new StringBuffer("SantoshBikkad");
+		sb2.deleteCharAt(5);
+		System.out.println(sb2);
+		System.out.println(sb2.delete(2, 7));
+		
+		
+		StringBuffer sb3=new StringBuffer("Pune");
+		System.out.println(sb3);
+		System.out.println(sb3.reverse());
+		
+		StringBuffer sb4=new StringBuffer(100);
+		sb4.append("Santosh");
+		System.out.println(sb4.length());
+		System.out.println(sb4.capacity());
+		sb4.trimToSize();
+		System.out.println(sb4.capacity());
+			}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,103 @@
+File handling:how we can read data from file and write data into file.
+All classes through which we can perform read and write opeartion are available in IO package.
+
+File handling Classes:
+1)File
+2)FileReader
+3)FileWriter
+
+
+1) creating file:
+
+Example:
+package fileHandling;
+
+
+import java.io.File;
+import java.io.IOException;
+
+public class CreateFile {
+
+	public static void main(String[] args) throws IOException {
+		
+   File f=new File("C:\\Users\\BR011TX\\Desktop\\Bikkad IT 01\\13-07-2021\\File.txt");
+		
+		if(f.createNewFile()) {
+			System.out.println("File created Successfully");
+		}else {
+			System.out.println("File already exists");
+		}
+		System.out.println("File created !!!");
+	}
+
+}
+
+2)File Class methods:
+
+package fileHandling;
+
+import java.io.File;
+
+public class FileInfo {
+
+	public static void main(String[] args) {
+		File f=new File("C:\\Users\\BR011TX\\Desktop\\Bikkad IT 01\\13-07-2021\\File.txt");
+          System.out.println(f.exists());
+          System.out.println(f.getName());
+		  System.out.println(f.getAbsolutePath());
+		  System.out.println(f.canWrite());
+		  System.out.println(f.canRead());
+		  System.out.println(f.length());
+		  System.out.println(f.delete());
+	}
+
+}
+
+3)Write data into file:
+
+package fileHandling;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileWrite {
+
+	public static void main(String[] args) throws IOException  {
+		
+		FileWriter fw=new FileWriter("C:\\Users\\BR011TX\\Desktop\\Bikkad IT 01\\13-07-2021\\File.txt");
+           
+		try {
+			fw.write("Welcome to Bikkad IT");
+			fw.write("\nI am java developer");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			fw.close();
+		}
+		
+             System.out.println("Data inserted");
+        
+	}
+
+}
+
+
+
+4)Rename a file
+
+package fileHandling;
+
+import java.io.File;
+
+public class RenameFile {
+
+	public static void main(String[] args) {
+		
+		 File f=new File("C:\\Users\\BR011TX\\Desktop\\Bikkad IT 01\\13-07-2021\\File1.txt");
+		 File f1=new File("C:\\Users\\BR011TX\\Desktop\\Bikkad IT 01\\13-07-2021\\File.txt");
+	     System.out.println(f.renameTo(f1));
+	}
+
+}
+

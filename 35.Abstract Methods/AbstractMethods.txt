@@ -1,0 +1,170 @@
+Abstract Method: A method which contain abstract modifier at the time of declaration is called as
+ abstract method.
+Abstract method doesnt contain body and it ends with semicolon.
+
+1) Abstract method can be used in abstract class only.
+
+Example :
+
+package abstractMethods;
+
+public abstract class A {
+	
+	public abstract void display();
+}
+
+
+
+Example 1:
+
+
+package abstractMethods;
+
+public abstract class Programming {
+
+	public abstract void developer();
+	
+	public abstract void trendingNo();
+}
+
+
+
+
+package abstractMethods;
+
+public class Java extends Programming{
+
+	@Override
+	public void developer() {
+	System.out.println("James gosling");
+		
+	}
+
+	@Override
+	public void trendingNo() {
+		System.out.println("NO 1");
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Java j=new Java();
+		j.developer();
+		j.trendingNo();
+		
+		
+		Programming p1=new Java();
+		p1.developer();
+		p1.trendingNo();
+	}
+
+}
+
+
+
+package abstractMethods;
+
+public class Python extends Programming{
+
+	@Override
+	public void developer() {
+		System.out.println("Rossum ");
+		
+	}
+
+	@Override
+	public void trendingNo() {
+		System.out.println("No 2");
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Python p=new Python();
+		p.developer();
+		p.trendingNo();
+		
+		Programming p1=new Python();
+		p1.developer();
+		p1.trendingNo();
+		
+		
+		
+		
+	}
+
+}
+
+
+2)Abstract method must be overrriden in sub classes otherwise it will become abstract class.
+
+Example :
+
+package abstractMethods;
+
+public abstract class Programming {
+
+	public abstract void developer();
+	
+	public abstract void trendingNo();
+}
+
+
+package abstractMethods;
+
+public abstract class Java extends Programming{
+
+	
+	@Override
+	public void developer() {
+	System.out.println("James gosling");
+		
+	}
+
+
+}
+
+
+package abstractMethods;
+
+public class Python extends Java{
+
+	
+
+	@Override
+	public void trendingNo() {
+		System.out.println("No 2");
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Python p=new Python();
+		p.developer();
+		p.trendingNo();
+		
+		Programming p1=new Python();
+		p1.developer();
+		p1.trendingNo();
+		
+		
+		
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

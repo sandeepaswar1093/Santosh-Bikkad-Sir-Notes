@@ -1,0 +1,137 @@
+Polymorphism: One name many forms.
+
+Example : Person -> Customer
+                    Student
+                    Friend
+                    Employee
+
+"Same object having diffrent behviour".
+
+Types of polymorphism.
+
+1)Complile time polymorphism/early binding/static polymorphism/overloding.
+2)Runtime polymorphism/late binding/dynamic polymorphism/overriding.
+
+1)Complile time polymorphism/early binding/static polymorphism/overloding:
+
+Example : Method Overloading.
+
+Method Overloading: Whenever class contains more than one method with same name and
+ diffrent argument/parameter is called as method overloading.
+
+Example : package methodOverloading;
+
+Example 1:
+
+public class A {
+
+	public void add() {
+		int a = 10;
+		int b = 12;
+		int c = a + b;
+		System.out.println("Addition :" + c);
+	}
+
+	public void add(int a, int b) {
+
+		int c = a + b;
+		System.out.println("Addition :" + c);
+	}
+
+	public static void main(String[] args) {
+		A a = new A();
+		a.add();
+		a.add(10, 20);
+
+	}
+}
+
+Example 2:
+
+
+package methodOverloading;
+
+public class B {
+
+	
+	public void add() {
+		int a = 10;
+		int b = 30;
+		int c = a + b;
+		System.out.println("Addition :" + c);
+	}
+	
+	public void add(int a) {
+		a=a+a;
+		System.out.println("Addition of aand a is :" + a);
+	}
+	
+	public void add(int a, int b) {
+
+		int c = a + b;
+		System.out.println("Addition :" + c);
+	}
+	
+	public void add(int a, int b,int c) {
+
+		int d = a + b +c;
+		System.out.println("Addition :" + d);
+	}
+	public static void main(String[] args) {
+		
+	 B b=new B();
+	 b.add();
+	 b.add(10);
+	 b.add(10, 20);
+	 b.add(12, 10, 20);
+	}
+}
+
+
+Example 3:
+
+package methodOverloading;
+
+public class C {
+
+	public void add(int a,int b) {
+		int c=a+b;
+		System.out.println("Addition :"+c);
+		}
+	public void add(int a,double b) {
+	double c=a+b;
+	System.out.println("Addition :"+c);
+	}
+	public static void main(String[] args) {
+		C c=new C();
+		c.add(10, 20);
+		c.add(10, 50.00);
+	}
+}
+
+
+
+Example4 :
+
+
+package methodOverloading;
+
+public class D {
+
+	public int add(int a,int b) {
+		int c=a+b;
+		return c;
+		}
+	public void add(int a,double b) {
+	double c=a+b;
+	System.out.println("Addition :"+c);
+	}
+	
+	public static void main(String[] args) {
+		 D d=new D();
+	int result=	 d.add(10,20);
+	System.out.println(result);
+	
+	d.add(10, 40.00);
+	}
+}

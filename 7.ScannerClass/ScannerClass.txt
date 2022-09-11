@@ -1,0 +1,79 @@
+Scanner Class:Scanner is predefinied class which is available in
+ java.util package.
+Scanner class is used to take input from user.
+
+Steps :
+
+1)If we use scanner class we must have to create object of Scanner class.
+
+Scanner sc=new Scanner(System.in);
+
+2) Import the scannner class.
+
+import java.util.Scanner;
+
+3)Methods available in scanner class.
+
+1)nextLine();//String 
+2)nextInt(); // int 
+3)nextFloat();// float
+4)nextDouble(); //double.
+
+
+Example 1: Taking int input
+
+import java.util.Scanner;
+
+public class Demo {
+
+	public static void main(String[] args) {
+	
+		System.out.println("Enter any number");
+		
+		Scanner sc=new Scanner(System.in);
+	int a;
+		a= sc.nextInt();
+		   
+		   System.out.println("The value of a ="+a);
+	}
+}
+
+
+Example 2: Taking String input.
+
+
+public class StringInput {
+
+	public static void main(String[] args) {
+		System.out.println("Enter any String");
+		Scanner sc = new Scanner(System.in);
+		String s;
+		s = sc.nextLine();
+
+		System.out.println("String is="+s);
+	}
+}
+
+
+Example 3: Addition of two numbers
+
+
+import java.util.Scanner;
+
+public class Addition {
+
+	public static void main(String[] args) {
+	
+		System.out.println("Enter Two numbers ");
+		Scanner t=new Scanner(System.in);
+		int a;
+		int b;
+		a=t.nextInt();
+		b =t.nextInt();
+		int c;
+		 c=a+b;
+		 
+		 System.out.println("Addition of a and b="+c);
+	}
+}
+

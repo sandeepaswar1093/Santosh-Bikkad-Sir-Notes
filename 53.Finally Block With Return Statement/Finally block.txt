@@ -1,0 +1,265 @@
+Try catch Finally inside finally block:
+
+syntax :
+
+try{
+
+}catch(){
+
+}finally{
+
+try{
+
+}catch(){
+
+}finally{
+
+}
+}
+
+
+Eample :
+
+
+package finallyblock1;
+
+public class FinallyDemo {
+
+	public static void main(String[] args) {
+
+		String s = null;
+		try {
+			s.toUpperCase();
+		} catch (NullPointerException n) {
+			System.out.println(n.getMessage());
+		} finally {
+
+			try {
+				String s1 = "Santosh";
+				Integer parseInt = Integer.parseInt(s1);
+
+			} catch (NumberFormatException n1) {
+				System.out.println(n1);
+
+			}finally {
+				System.out.println("finally block inside finally");
+				
+			}
+
+		}
+
+	}
+}
+
+
+
+Example 2:
+
+
+package finallyblock1;
+
+public class FinallyDemo {
+
+	public static void main(String[] args) {
+
+		String s = null;
+		try {
+			s.toUpperCase();
+		} catch (NullPointerException n) {
+			System.out.println(n.getMessage());
+		} finally {
+
+			try {
+				String s1 = "Santosh";
+				Integer parseInt = Integer.parseInt(s1);
+
+			} catch (ArithmeticException n1) {
+				System.out.println(n1);
+
+			}finally {
+				System.out.println("finally block inside finally");
+				
+			}
+
+		}
+
+	}
+}
+
+
+Exmple 3:
+
+
+
+package finallyblock1;
+
+public class FinallyDemo {
+
+	public static void main(String[] args) {
+
+		String s = null;
+		try {
+			s.toUpperCase();
+		} catch (NumberFormatException n) {
+			System.out.println(n.getMessage());
+		} finally {
+
+			try {
+				String s1 = "Santosh";
+				Integer parseInt = Integer.parseInt(s1);
+
+			} catch (ArithmeticException n1) {
+				System.out.println(n1);
+
+			}finally {
+				System.out.println("finally block inside finally");
+				
+			}
+
+		}
+
+	}
+}
+
+
+
+Finally With return Statement:
+
+1)In Method if return statement executed then remaining line of code will be not executed.
+
+
+Example :
+
+
+package finallyWithReturnStatement;
+
+public class A {
+
+	public int m1() {
+		if (true) {
+			return 10;
+		}
+		System.out.println("Welcome to Bikkad It");
+		return 20;
+
+	}
+
+	public static void main(String[] args) {
+
+		A a = new A();
+		int result = a.m1();
+		System.out.println(result);
+	}
+}
+
+
+2) If return statement in try block then finally block will be executed.
+
+package finallyWithReturnStatement;
+
+public class TryWithReturnDemo {
+
+	public int m1() {
+		int a=10;
+		try {
+			System.out.println("try start");
+			return a;
+		}finally {
+			
+		System.out.println("finally Block" );
+                	
+		}
+		}
+		public static void main(String[] args) {
+			
+			TryWithReturnDemo a=new TryWithReturnDemo();
+	      int i = a.m1();
+	      System.out.println(i);
+		}
+	
+}
+
+
+3) If try and finally botyh have return statement then finally block return statement will be executed.
+
+package finallyWithReturnStatement;
+
+public class TryWithReturnDemo {
+
+	public int m1() {
+		int a=10;
+		try {
+			System.out.println("try start");
+			return a;
+		}finally {
+			a=30;
+		System.out.println("finally Block" );
+                 return a;	
+		}
+		}
+		public static void main(String[] args) {
+			
+			TryWithReturnDemo a=new TryWithReturnDemo();
+	      int i = a.m1();
+	      System.out.println(i);
+		}
+	
+}
+
+
+4)
+
+
+package finallyWithReturnStatement;
+
+public class TryWithReturnDemo {
+
+	public int m1() {
+		int a=10;
+		try {
+			System.out.println("try start");
+			
+			int s=10;
+			int s1=0;
+			int s2=s/s1;
+			System.out.println(s2);
+			
+			return a;
+		}finally {
+			a=30;
+		System.out.println("finally Block" );
+                return a;	
+		}
+		}
+		public static void main(String[] args) {
+			
+			TryWithReturnDemo a=new TryWithReturnDemo();
+	      int i = a.m1();
+	      System.out.println(i);
+		}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

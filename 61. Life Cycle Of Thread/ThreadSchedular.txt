@@ -1,0 +1,45 @@
+Thread Schedular: Thread schedular is part of jvm which executes multiple Thread simultaneously.
+
+Example :
+
+
+package threadSchedular;
+
+public class Demo extends Thread {
+
+	public void run() {
+
+		for (int i = 1; i <= 3; i++) {
+			String name = Thread.currentThread().getName();
+			System.out.println(name);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+	}
+}
+
+
+package threadSchedular;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Demo d=new Demo();
+		Demo d1=new Demo();
+		Demo d2=new Demo();
+		
+		d.setName("Thread Demo 1");
+		d1.setName("Thread Demo 2");
+		d2.setName("Thread Demo 3");
+		
+		d.start();
+		d1.start();
+		d2.start();
+	}
+}

@@ -1,0 +1,115 @@
+Class:It is collection of objects.
+Class does not take any space into memory.
+Class is also called as logical entity.
+
+Example : Animal ,Person, Aadhar etc.
+
+
+Syntax: AcceesModifier class ClassName{
+
+//class body
+}
+
+Example : public class Demo{
+
+//class body
+}
+
+AcceesModifier : public ,default.
+
+class :class is a keyword. It is used to create the class.
+
+ClassName:Class name should be start with capital letter.
+
+Body:The class body surrounded by braces. {}.
+
+Types of classes:
+
+1)predefinied classes: The classes which are written by java is called
+ as predefinied classes.
+
+Example : String ,System etc.
+
+2) UserDefinied Classes.The classes which are written by user is called as 
+UserDefinied classes.
+
+Example : Addition,Demo,Animal etc
+
+
+
+
+
+
+
+Object: Object means seperate copy of memery.
+Object takes some space in memory.
+Object is also called as physical entity.
+
+Syntax: Classname refName=new Classname(); 
+
+
+Example :
+
+public class Demo {
+
+	int a;
+	String name;
+	
+	public static void main(String[] args) {
+		
+		Demo d=new Demo();
+		d.a=10;
+		d.name="Santosh";
+		
+		System.out.println(d.a);
+		System.out.println(d.name);
+		
+		Demo d1=new Demo();
+		    d1.a=20;
+		    d1.name="Bikkad";
+		    
+		    System.out.println(d1.a);
+		    System.out.println(d1.name);
+		    
+	}
+}
+
+
+Example :
+
+public class Student {
+
+	int rollno;
+	String name;
+	String address;
+	String panNo;
+	
+	public static void main(String[] args) {
+		
+		Student stu=new Student();
+		     stu.rollno=10;
+		     stu.name="Prashant";
+		     stu.address="Pune";
+		     stu.panNo="45563APG";
+		     
+		   System.out.println(stu.rollno);  
+		   System.out.println(stu.name);
+		   System.out.println(stu.address);
+		   System.out.println(stu.panNo);
+		   
+		   
+		   Student stu1=new Student();
+		     stu1.rollno=20;
+		     stu1.name="Kumar";
+		     stu1.address="Aurangabad";
+		     stu1.panNo="5668FGDH";
+		     
+		   System.out.println(stu1.rollno);  
+		   System.out.println(stu1.name);
+		   System.out.println(stu1.address);
+		   System.out.println(stu1.panNo);
+	}
+}
+
+
+
